@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KAL-M Robotics | Autonomous Ground Robots, Built for the Frontline</title>
+<meta name="description" content="KAL-M Robotics and Innovations builds modular autonomous unmanned ground vehicles in Chennai, India. Field-tested with the Indian Army at 12,000 ft.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="KAL-M Robotics | Born at the borders. Built for the frontline.">
+<meta property="og:description" content="One platform. Many missions. Modular autonomous UGVs designed, built and field-tested in India.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kal-m.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<script type="module" src="model.js?v=4"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="KAL-M home">
+    <span class="brand-mark">KAL-M</span>
+    <span class="brand-sub">Robotics &amp; Innovations</span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Main">
+    <a href="#platform">Platform</a>
+    <a href="#autonomy">Autonomy</a>
+    <a href="#terrain">Terrain</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#field">Field record</a>
+    <a href="#about">About</a>
+    <a class="btn btn-sm js-brief" href="#briefing" id="briefOpen">Investor Briefing</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg hero-stage" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="bars" aria-hidden="true"></div>
+  <div class="hero-content wrap">
+    <p class="mii mono"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#FF9933"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.7" fill="none" stroke="#000080" stroke-width=".45"/><g stroke="#000080" stroke-width=".2"><line x1="12.40" y1="10.00" x2="17.60" y2="10.00"/><line x1="12.49" y1="9.33" x2="17.51" y2="10.67"/><line x1="12.75" y1="8.70" x2="17.25" y2="11.30"/><line x1="13.16" y1="8.16" x2="16.84" y2="11.84"/><line x1="13.70" y1="7.75" x2="16.30" y2="12.25"/><line x1="14.33" y1="7.49" x2="15.67" y2="12.51"/><line x1="15.00" y1="7.40" x2="15.00" y2="12.60"/><line x1="15.67" y1="7.49" x2="14.33" y2="12.51"/><line x1="16.30" y1="7.75" x2="13.70" y2="12.25"/><line x1="16.84" y1="8.16" x2="13.16" y2="11.84"/><line x1="17.25" y1="8.70" x2="12.75" y2="11.30"/><line x1="17.51" y1="9.33" x2="12.49" y2="10.67"/></g></svg><span>Made in India</span></p>
+    <h1 class="hero-title">
+      <span class="hero-line1">Born at the borders.</span>
+      <span class="hero-line2">Built for the frontline.</span>
+    </h1>
+    <p class="hero-lead">Modular autonomous ground robots, field-proven with the Indian Army.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#fleet">Explore the fleet</a>
+      <a class="btn btn-ghost js-brief" href="#briefing">Investor Briefing</a>
+    </div>
+  </div>
+  <div class="lineup wrap">
+    <div class="lu-base">
+      <p class="lu-tag mono">Base platform</p>
+      <div class="lu-img"><img src="assets/img/v-base.webp" alt="KAL-M base platform" fetchpriority="high"></div>
+      <h3 class="lu-name">Base</h3>
+      <p class="lu-text">One tracked chassis with a quick-swap mount. Every mission starts here.</p>
+    </div>
+    <div class="lu-divider" aria-hidden="true"><span>&rarr;</span></div>
+    <div class="lu-missions">
+      <p class="lu-tag mono">Mission versions · One platform. Many missions.</p>
+      <ol class="lu-row">
+        <li><div class="lu-img"><img src="assets/img/v-surveillance.webp" alt="KAL-M surveillance version with dome camera"></div>
+          <h3 class="lu-name">Surveillance</h3><p class="lu-text">Dome camera on the mount. Watch, patrol and report in real time.</p></li>
+        <li><div class="lu-img"><img src="assets/img/v-antitank.webp" alt="KAL-M anti-tank version with mine module"></div>
+          <h3 class="lu-name">Anti-tank</h3><p class="lu-text">Carries the mine module to the target, so soldiers don't have to.</p></li>
+        <li><div class="lu-img"><img src="assets/img/v-cargo.webp" alt="KAL-M cargo version with deep cargo well"></div>
+          <h3 class="lu-name">Cargo</h3><p class="lu-text">Deep cargo well for supplies, ammunition and medical kits.</p></li>
+      </ol>
+    </div>
+  </div>
+  <div class="hero-foot wrap">
+    <div class="hero-proof">
+      <div><b>12,000 ft</b><span class="mono">High-altitude trials</span></div>
+      <div><b>20 days</b><span class="mono">Forward deployment</span></div>
+      <div><b>20+</b><span class="mono">Field iterations</span></div>
+      <div><b>3</b><span class="mono">Patents</span></div>
+    </div>
+    <p class="trust mono"><span>Trusted by</span> Rudram Dynamics · TANCAM · Dassault Systèmes · FORGE · TIDCO</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><span class="num">2020</span><span class="lbl">Building UGVs since</span></div>
+    <div class="stat"><span class="num"><span class="pre">₹</span><span data-count="27">0</span>L+</span><span class="lbl">Grants secured</span></div>
+    <div class="stat"><span class="num"><span class="pre">₹</span>2–<span data-count="25">0</span> Cr</span><span class="lbl">Defence pipeline</span></div>
+    <div class="stat"><span class="num">GeM</span><span class="lbl">Registered government supplier</span></div>
+    <div class="stat"><span class="num">Positive</span><span class="lbl">Cash flow since year 1</span></div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section" id="platform">
+  <div class="wrap">
+    <p class="eyebrow mono">01 / What we do</p>
+    <h2 class="h2">One platform.<br>Many missions.</h2>
+    <p class="lead-xl">A <mark>single tracked base</mark> takes <mark>swappable mission mounts</mark>, from anti-tank to medevac.</p>
+  </div>
+</section>
+
+<!-- CONFIGURATOR -->
+<section class="section section-dark" id="configurator">
+  <div class="wrap config">
+    <div class="config-copy">
+      <p class="eyebrow mono">02 / Configure the mission</p>
+      <h2 class="h2">Build your mission.<br>Watch it fit.</h2>
+      <p class="muted">Choose the variant, the mission module and the terrain.</p>
+      <div class="mod-btns" role="tablist" aria-label="Mission modules">
+        <button class="mod-btn active" data-mod="base" role="tab" aria-selected="true">Base platform</button>
+        <button class="mod-btn" data-mod="surv" role="tab" aria-selected="false">Surveillance</button>
+        <button class="mod-btn" data-mod="at" role="tab" aria-selected="false">Anti-tank</button>
+        <button class="mod-btn" data-mod="cargo" role="tab" aria-selected="false">Cargo</button>
+      </div>
+      <p class="mb-label mono">VARIANT</p>
+      <div class="chips" id="variantChips">
+        <button class="chip" data-v="ALPHA" data-p="5 kg">Alpha</button>
+        <button class="chip active" data-v="BRAVO" data-p="10 kg">Bravo</button>
+        <button class="chip" data-v="CHARLIE" data-p="15 kg">Charlie</button>
+      </div>
+      <p class="mb-label mono">PRIMARY TERRAIN</p>
+      <div class="chips" id="terrainChips">
+        <button class="chip active">Desert sand</button><button class="chip">Gravel</button><button class="chip">Grassland</button>
+        <button class="chip">Riverbed</button><button class="chip">Snow</button><button class="chip">High altitude</button>
+      </div>
+      <dl class="mod-spec mono" id="modSpec">
+        <div><dt>BUILD</dt><dd id="specBuild">BRAVO · Base platform</dd></div>
+        <div><dt>ROLE</dt><dd id="specRole">Common base</dd></div>
+        <div><dt>PAYLOAD CAPACITY</dt><dd id="specPayload">10 kg</dd></div>
+        <div><dt>TERRAIN</dt><dd id="specTerrain">Desert sand</dd></div>
+        <div><dt>CONTROL</dt><dd>Remote / Autonomous</dd></div>
+      </dl>
+    </div>
+
+    <div class="config-stage" aria-hidden="true">
+      <svg class="ugv-svg" viewBox="0 0 600 380" id="configSvg">
+        <defs>
+          <pattern id="bp" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#1f1f1f" stroke-width="1"/></pattern>
+        </defs>
+        <rect width="600" height="380" fill="url(#bp)"/>
+        <!-- gantry arm -->
+        <g class="arm" id="arm">
+          <rect x="40" y="0" width="520" height="10" fill="#1c1c1c"/>
+          <rect x="288" y="10" width="24" height="10" fill="#2b2b2b"/>
+          <rect id="armCable" x="298" y="20" width="4" height="6" fill="#8a74d6"/>
+          <path id="armClaw" d="M284 26h32v6h-6v8h-4v-8h-12v8h-4v-8h-6z" fill="#8a74d6"/>
+        </g>
+        <!-- base UGV: true side view rendered from the KAL-M CAD model -->
+        <g class="ugv-base">
+          <image href="assets/img/side-base.webp" x="80" y="222" width="440" height="122"/>
+          <g class="stencil" font-family="IBM Plex Mono, monospace" font-weight="500" fill="#c4c2a4" opacity=".72" letter-spacing="1.6">
+            <text x="344" y="262" font-size="8.5" text-anchor="middle">KAL-M</text>
+            <text x="437" y="262" font-size="8.5" text-anchor="middle">B-01</text>
+          </g>
+          <rect x="250" y="219" width="100" height="4" fill="#8a74d6"/>
+        </g>
+        <!-- modules (drawn from the real KAL-M versions) -->
+        <g transform="translate(0 -3)">
+        <g class="module" id="mod-surv">
+          <rect x="282" y="208" width="36" height="14" rx="2" fill="#232323"/>
+          <path d="M284 208 a16 16 0 0 1 32 0z" fill="#161616"/>
+          <path d="M289 202 a11 11 0 0 1 9 -8" fill="none" stroke="#5e5e5e" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="306" cy="201" r="3.5" fill="#c9bcf2"/>
+        </g>
+        <g class="module" id="mod-at">
+          <rect x="244" y="206" width="112" height="16" rx="5" fill="#575b3c"/>
+          <rect x="244" y="206" width="112" height="4" rx="2" fill="#6d714b"/>
+          <rect x="272" y="196" width="56" height="11" rx="3" fill="#62663f"/>
+          <rect x="292" y="189" width="16" height="8" rx="2" fill="#4c4f33"/>
+          <path d="M252 214h96" stroke="#45482f" stroke-width="1.5"/>
+        </g>
+        <g class="module" id="mod-cargo">
+          <rect x="240" y="203" width="120" height="19" rx="3" fill="#262626"/>
+          <rect x="246" y="207" width="108" height="15" fill="#0e0e0e"/>
+          <rect x="258" y="196" width="34" height="14" rx="1.5" fill="#8f8f8f"/>
+          <rect x="296" y="193" width="28" height="17" rx="1.5" fill="#a6a6a6"/>
+          <rect x="327" y="199" width="20" height="11" rx="1.5" fill="#7a7a7a"/>
+          <path d="M258 203h34M296 201h28" stroke="#6b6b6b" stroke-width="1"/>
+        </g>
+        </g>
+        <!-- dimension lines -->
+        <g class="dim mono">
+          <line x1="104" y1="352" x2="496" y2="352" stroke="#3f3f3f"/>
+          <line x1="104" y1="346" x2="104" y2="358" stroke="#3f3f3f"/><line x1="496" y1="346" x2="496" y2="358" stroke="#3f3f3f"/>
+          <text x="300" y="370" text-anchor="middle">LENGTH 580 MM · SIZE BUILT TO ORDER</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+<!-- CLOSER LOOK: 3D -->
+<section class="closer" id="closer">
+  <div class="closer-sticky">
+    <div class="wrap closer-head">
+      <p class="eyebrow mono">03 / Closer look</p>
+      <h2 class="h2">Every angle.<br>Every detail.</h2>
+    </div>
+    <div class="scene" id="scene3d"><img class="scene-fallback" src="assets/img/bravo-olive.webp" alt="KAL-M Bravo tracked UGV" loading="lazy"><p class="scene-load mono" id="sceneLoad">LOADING 3D MODEL…</p></div>
+    <ol class="feats" id="feats">
+      <li data-part="tracks"><span class="mono">01</span><h3>All-terrain tracks</h3><p>Wide rubber tracks spread the load over sand, snow, mud and stone.</p></li>
+      <li data-part="suspension"><span class="mono">02</span><h3>Independent suspension</h3><p>Six suspension arms keep the tracks pressed to uneven ground.</p></li>
+      <li data-part="drive"><span class="mono">03</span><h3>Dual electric drive</h3><p>One motor per track: skid-steer turns on the spot.</p></li>
+      <li data-part="mount"><span class="mono">04</span><h3>Quick-swap mount</h3><p>The top deck takes every mission module.</p></li>
+      <li data-part="body"><span class="mono">05</span><h3>3D-printed body</h3><p>Light, tough panels, replaced in a day.</p></li>
+    </ol>
+    <p class="map-tag mono closer-tag">Live 3D model · KAL-M Bravo</p>
+  </div>
+</section>
+
+<!-- AUTONOMY -->
+<section class="section" id="autonomy">
+  <div class="wrap">
+    <p class="eyebrow mono">04 / Autonomy</p>
+    <h2 class="h2">It thinks<br>on the ground.</h2>
+    <p class="muted narrow">Our own navigation stack, built to keep working when GPS doesn't.</p>
+    <div class="pillars">
+      <div class="pillar"><svg viewBox="0 0 40 40"><path d="M4 32 14 16l7 9 5-6 10 13z"/></svg><h3>Terrain understanding</h3><p>Reads the ground ahead and picks the drivable path.</p></div>
+      <div class="pillar"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><path d="M8 8l24 24"/></svg><h3>GPS-denied autonomy</h3><p>Keeps navigating when satellite signals are jammed or lost.</p></div>
+      <div class="pillar"><svg viewBox="0 0 40 40"><circle cx="15" cy="16" r="9"/><circle cx="25" cy="16" r="9"/><circle cx="20" cy="25" r="9"/></svg><h3>Sensor fusion</h3><p>Onboard sensors merged into one picture of the ground ahead.</p></div>
+      <div class="pillar"><svg viewBox="0 0 40 40"><rect x="9" y="9" width="22" height="22"/><path d="M15 4v5M25 4v5M15 31v5M25 31v5M4 15h5M4 25h5M31 15h5M31 25h5"/></svg><h3>Real-time decisions</h3><p>Plans and re-plans on board, in milliseconds.</p></div>
+      <div class="pillar"><svg viewBox="0 0 40 40"><path d="M32 20a12 12 0 1 1-4-9"/><path d="M29 4v8h-8"/></svg><h3>Adapts on the move</h3><p>Responds to changing conditions and obstacles.</p></div>
+    </div>
+    <div class="modes mono"><span>MODES</span><b>Remote</b><b>Semi-autonomous</b><b>Autonomous waypoint</b></div>
+    <div class="patents">
+      <div class="pat-n"><b>3</b><span class="mono">Patents</span></div>
+      <div class="pat-t">
+        <p class="mono">Protected IP · GPS-denied autonomous navigation</p>
+        <p>Granted 2025: <b>Device and Method for Determining Vehicle Orientation</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERRAIN JOURNEY -->
+<section class="terrain" id="terrain">
+  <div class="terrain-sticky">
+    <div class="terrain-track" id="terrainTrack">
+      <div class="tpanel t-sand"><div class="dunes"></div></div>
+      <div class="tpanel t-gravel"><div class="pebbles"></div></div>
+      <div class="tpanel t-grass"><div class="blades"></div></div>
+      <div class="tpanel t-river"><div class="water"></div></div>
+      <div class="tpanel t-snow"><div class="drifts"></div></div>
+      <div class="tpanel t-mount"><div class="peaks"></div></div>
+    </div>
+    <div class="terrain-hud wrap">
+      <p class="eyebrow mono">05 / Proven terrain</p>
+      <h2 class="h2 terrain-name" id="terrainName">Desert sand</h2>
+      <p class="terrain-note" id="terrainNote">Thar desert, Rajasthan. Soft sand that stops wheels.</p>
+      <div class="terrain-progress mono" id="terrainSteps">
+        <span class="on">SAND</span><span>GRAVEL</span><span>GRASS</span><span>RIVERBED</span><span>SNOW</span><span>12,000 FT</span>
+      </div>
+    </div>
+    <svg class="terrain-ugv" viewBox="0 0 400 200" aria-hidden="true">
+      <rect x="170" y="40" width="10" height="46" fill="#a8a8a8"/><rect x="156" y="24" width="38" height="20" rx="3" fill="#dcdcdc"/><circle cx="186" cy="34" r="5" fill="#8a74d6"/>
+      <path d="M100 86h200l18 20v22H82v-22z" fill="#3f3f3f"/>
+      <rect x="70" y="122" width="260" height="44" rx="22" fill="#0a0a0a" stroke="#1c1c1c" stroke-width="3"/>
+      <g class="wheels" fill="#5e5e5e" stroke="#0a0a0a" stroke-width="2"><circle cx="93" cy="144" r="16"/><circle cx="307" cy="144" r="16"/><circle cx="145" cy="150" r="11"/><circle cx="200" cy="150" r="11"/><circle cx="255" cy="150" r="11"/></g>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ALL WEATHER -->
+<section class="section section-dark" id="weather">
+  <div class="wrap">
+    <p class="eyebrow mono">06 / All conditions</p>
+    <h2 class="h2">Built for good days.<br>Ready for the worst.</h2>
+    <div class="wx">
+      <article class="wx-tile wx-heat"><span class="mono">01</span><h3>Heat</h3><p>Desert sun on the Thar ranges, with sealed electronics and managed cooling.</p></article>
+      <article class="wx-tile wx-dust"><span class="mono">02</span><h3>Dust &amp; sand</h3><p>Sealed drive modules keep fine sand and debris out.</p></article>
+      <article class="wx-tile wx-rain"><span class="mono">03</span><h3>Rain &amp; mud</h3><p>Tracks keep grip where wheels slide and sink.</p></article>
+      <article class="wx-tile wx-cold"><span class="mono">04</span><h3>Cold &amp; altitude</h3><p>Proven at 6°C and 12,000 ft at a forward base.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section class="section" id="fleet">
+  <div class="wrap">
+    <p class="eyebrow mono">07 / The fleet</p>
+    <h2 class="h2">One family.<br>Three sizes.</h2>
+    <figure class="figure figure-blueprint">
+      <img src="assets/img/sizes.webp" alt="Size comparison of small, medium and large KAL-M UGVs next to a person" loading="lazy">
+    </figure>
+    <ul class="salient mono">
+      <li>Quick-swap mission mount</li><li>Remote + autonomous</li><li>360° sensing</li>
+      <li>All-terrain tracks</li><li>3D-printed body</li><li>Built to order</li>
+    </ul>
+    <div class="fleet">
+      <article class="vcard">
+        <div class="vimg ph" data-label="ALPHA render (pending)"></div>
+        <div class="vbody">
+          <p class="mono vclass">CLASS A · SMALL</p>
+          <h3 class="vname"><span class="vprefix">[Identity]</span> ALPHA</h3>
+          <p class="vbest">Best for: Recon and light carry</p>
+        </div>
+      </article>
+      <article class="vcard featured">
+        <div class="vimg vimg-photo"><img id="bravoImg" src="assets/img/bravo-olive.webp" alt="KAL-M Bravo tracked UGV" loading="lazy"></div>
+        <div class="vbody">
+          <p class="mono vclass">CLASS B · MEDIUM</p>
+          <h3 class="vname"><span class="vprefix">[Identity]</span> BRAVO</h3>
+          <p class="vbest">Best for: Surveillance and patrol</p>
+          <div class="swatches" role="group" aria-label="Bravo finish">
+            <button class="sw sw-olive active" data-img="assets/img/bravo-olive.webp" aria-label="Olive"></button>
+            <button class="sw sw-black" data-img="assets/img/bravo-black.webp" aria-label="Black"></button>
+            <button class="sw sw-camo" data-img="assets/img/bravo-camo.webp" aria-label="Camo"></button>
+            <span class="mono sw-name" id="swName">OLIVE</span>
+          </div>
+        </div>
+      </article>
+      <article class="vcard">
+        <div class="vimg ph" data-label="CHARLIE render (pending)"></div>
+        <div class="vbody">
+          <p class="mono vclass">CLASS C · LARGE</p>
+          <h3 class="vname"><span class="vprefix">[Identity]</span> CHARLIE</h3>
+          <p class="vbest">Best for: Cargo and logistics</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMMAND -->
+<section class="section section-dark" id="command">
+  <div class="wrap command">
+    <div>
+      <p class="eyebrow mono">08 / Deploy &amp; command</p>
+      <h2 class="h2">Deploy in minutes.<br>Command in real time.</h2>
+      <p class="muted">Every KAL-M vehicle is part of a family of ground robots, planned, tracked and controlled together from one command platform.</p>
+      <ul class="ticks">
+        <li>Mission planning on the map</li>
+        <li>Remote and autonomous modes</li>
+        <li>Live position and status of every unit</li>
+      </ul>
+      <ol class="deploy">
+        <li><span class="mono">01</span>Unload &amp; power up</li>
+        <li><span class="mono">02</span>Mount the mission module</li>
+        <li><span class="mono">03</span>Mission live</li>
+      </ol>
+    </div>
+    <div class="map" aria-hidden="true">
+      <div class="map-grid"></div>
+      <svg class="map-svg" viewBox="0 0 500 340">
+        <path d="M30 280 C120 220 160 250 230 190 S360 120 470 60" fill="none" stroke="#8a74d6" stroke-width="2" stroke-dasharray="6 6"/>
+        <path d="M60 60 C140 120 220 90 300 150 S420 260 470 290" fill="none" stroke="#c9bcf2" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>
+        <circle class="unit u1" r="7" fill="#8a74d6"/>
+        <circle class="unit u2" r="7" fill="#c9bcf2"/>
+        <circle class="unit u3" cx="250" cy="250" r="7" fill="#ffffff"/>
+        <circle cx="250" cy="250" r="30" fill="none" stroke="#ffffff" opacity=".35"/>
+      </svg>
+      <div class="map-legend mono">
+        <span><i class="c1"></i>BRAVO-01 · PATROL</span>
+        <span><i class="c2"></i>ALPHA-02 · RECON</span>
+        <span><i class="c3"></i>CHARLIE-01 · HOLD</span>
+      </div>
+      <div class="status mono" id="status">
+        <div><span>T+</span><b id="stClock">00:00:00</b></div>
+        <div><span>LINK</span><b class="ok">SECURE</b></div>
+        <div><span>UNITS</span><b>3 / 3 LIVE</b></div>
+        <div><span>BATT</span><b id="stBatt">96%</b></div>
+      </div>
+      <p class="map-tag mono">ILLUSTRATION · Real screen to follow</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD RECORD -->
+<section class="section dossier section-cut" id="field">
+  <div class="wrap">
+    <p class="eyebrow mono">09 / Field record</p>
+    <h2 class="h2">Six years.<br>Built in the field.</h2>
+    <ol class="timeline">
+      <li><span class="tl-date mono">2020</span><h3>Chennai Police RobotCop</h3><p>Our first UGV, built in 4 days for the lockdown, on patrol for 6 months.</p>
+        <img class="tl-img" src="assets/img/robotcop-2020.webp" alt="RobotCop UGV with Chennai City Police, 2020" loading="lazy"></li>
+      <li><span class="tl-date mono">JUL 2023</span><h3>KAL-M begins</h3><p>Two autonomous-navigation patents filed.</p></li>
+      <li><span class="tl-date mono">JAN–FEB 2024</span><h3>Project UGV</h3><p>30-day public build of the tracked platform with TANCAM and FORGE.</p>
+        <img class="tl-img" src="assets/img/cad-tracks.webp" alt="CAD of the KAL-M track and suspension system" loading="lazy"></li>
+      <li><span class="tl-date mono">MAY 2025</span><h3>First defence trials</h3><p>High-altitude forward base: 12,000 ft, 6°C, 150 kg up a 30° climb.</p></li>
+      <li><span class="tl-date mono">AUG 2025</span><h3>Patent granted</h3><p>Vehicle orientation for GPS-denied navigation.</p></li>
+      <li><span class="tl-date mono">OCT 2025</span><h3>3D-printed land drone</h3><p>Built for sand, co-developed with Rudram Dynamics.</p>
+        <img class="tl-img tl-tall" src="assets/img/land-drone-sand.webp" alt="Small KAL-M tracked land drone on sand" loading="lazy"></li>
+      <li><span class="tl-date mono">NOV–DEC 2025</span><h3>20-day forward deployment</h3><p>20+ field iterations; mission-ready unit handed over.</p></li>
+      <li><span class="tl-date mono">MAR 2026</span><h3>NSG engagement</h3><p>Two days with the National Security Guard.</p></li>
+      <li><span class="tl-date mono">MAY 2026</span><h3>Third patent</h3><p>GPS-denied autonomous navigation.</p></li>
+      <li class="tl-now"><span class="tl-date mono">SEP 2026 · NOW</span><h3>Latest platform</h3><p>New tracked UGV with stabilised camera; live demos in progress.</p>
+        <img class="tl-img" src="assets/img/proto-2026.webp" alt="Latest KAL-M tracked UGV with camera dome, 2026" loading="lazy"></li>
+    </ol>
+  </div>
+</section>
+
+<!-- INDIA MAP -->
+<section class="section section-dark" id="india">
+  <div class="wrap india">
+    <div class="india-copy">
+      <p class="eyebrow mono">10 / Across India</p>
+      <h2 class="h2">From the coast<br>to the border.</h2>
+      <ul class="regions">
+        <li data-r="hq"><span class="mono">HQ</span><h3>Chennai, Tamil Nadu</h3><p>Design, manufacturing and the overnight repair loop.</p></li>
+        <li data-r="north"><span class="mono">FIELD</span><h3>Northern forward areas, J&amp;K</h3><p>12,000 ft trials (May 2025) and a 20-day forward deployment (Nov–Dec 2025).</p></li>
+        <li data-r="thar"><span class="mono">FIELD</span><h3>Thar desert, Rajasthan</h3><p>Soft-sand mobility and desert operations.</p></li>
+        <li data-r="partner"><span class="mono">PARTNER</span><h3>Gandhinagar, Gujarat</h3><p>Rudram Dynamics, strategic defence partner.</p></li>
+      </ul>
+    </div>
+    <div class="india-map">
+      <svg viewBox="0 0 560 630" role="img" aria-label="Map of India showing KAL-M regions">
+        <path class="land" d="M176.5 42.3L179.0 42.3L179.6 42.9L182.0 41.6L183.8 42.8L184.3 40.8L186.2 40.3L187.0 41.3L188.4 41.0L188.9 38.5L189.9 37.7L193.0 37.4L193.5 36.5L195.2 36.8L200.3 34.5L201.2 32.7L204.5 33.7L205.6 33.1L209.4 33.2L210.5 32.3L212.1 32.6L213.0 35.0L214.6 34.1L214.6 35.7L215.8 36.5L217.0 39.2L219.0 39.5L219.8 40.5L221.7 39.3L222.5 40.0L221.9 41.0L223.5 43.5L225.9 41.8L225.6 40.9L226.3 40.5L229.3 41.5L230.2 42.6L229.5 44.2L227.7 45.1L227.6 47.9L226.2 49.7L226.7 52.6L223.8 56.9L223.9 57.8L220.6 58.1L218.7 59.4L219.0 61.6L218.2 62.6L213.4 63.0L215.2 67.3L213.1 68.2L213.1 69.3L211.7 70.0L211.6 71.8L207.4 71.5L206.0 72.2L203.9 71.3L201.9 72.5L204.5 77.1L204.4 78.4L205.6 79.6L202.0 80.3L202.8 84.3L206.0 88.0L206.8 88.4L208.1 87.3L211.6 88.2L210.1 92.0L214.3 96.8L214.1 98.5L211.6 101.6L210.1 100.7L209.1 100.9L206.4 102.4L205.9 104.6L204.4 104.3L203.4 105.3L199.9 102.4L199.2 98.1L197.2 99.2L197.2 99.9L195.0 99.7L192.8 101.4L194.2 103.2L194.5 106.5L199.9 112.1L198.5 115.8L199.3 118.3L200.2 118.4L201.1 119.8L198.8 121.8L200.2 123.1L199.3 124.6L199.9 125.8L202.0 126.2L202.9 124.7L204.3 125.0L204.3 123.5L205.8 122.9L208.3 125.3L208.2 126.7L209.6 127.6L209.8 129.0L211.6 129.8L211.9 131.5L213.4 131.4L215.1 133.2L217.9 131.9L220.1 132.6L221.3 134.4L224.6 136.4L225.7 135.8L227.0 136.8L226.1 138.7L226.6 140.4L232.6 143.0L233.8 142.6L237.4 145.5L241.6 147.0L241.9 147.9L241.0 148.3L239.8 148.5L239.4 147.5L238.5 148.6L238.8 149.4L236.4 151.9L233.7 152.9L231.7 156.1L230.6 155.9L229.3 157.0L230.1 160.1L228.9 160.9L228.1 162.9L227.0 163.1L228.4 165.7L228.0 167.9L227.2 167.6L227.6 169.1L225.3 169.9L223.9 175.5L227.2 176.8L229.2 179.3L230.9 179.4L232.1 181.0L231.9 178.7L233.1 178.2L240.4 183.2L241.4 183.0L241.4 183.7L245.1 185.0L247.0 189.1L249.3 188.8L250.1 190.5L257.4 194.8L259.2 193.4L260.9 193.5L267.9 198.4L272.8 197.6L273.7 200.3L273.3 202.0L281.8 203.1L284.0 205.4L285.7 203.8L285.4 202.4L289.8 202.7L294.2 205.1L293.8 203.1L297.1 203.3L298.5 201.7L299.4 201.6L302.1 204.3L308.3 205.4L309.5 207.6L308.6 211.1L314.6 212.8L314.7 213.7L316.2 214.2L315.7 214.9L318.8 214.7L319.2 216.8L323.7 216.4L326.8 214.5L328.8 215.9L328.9 219.0L330.9 219.8L331.0 220.6L334.3 218.7L337.8 220.2L340.0 219.6L347.3 223.5L348.0 222.8L350.4 222.8L353.4 220.3L354.0 223.0L355.5 223.9L357.2 223.8L358.6 225.1L360.5 223.3L363.2 224.4L369.0 222.5L371.0 224.8L372.6 223.5L374.3 217.2L373.4 212.3L371.6 211.3L370.6 209.6L372.1 205.3L371.7 202.1L374.5 196.2L374.5 194.9L373.1 193.7L373.6 192.7L375.5 193.2L378.5 192.4L382.7 189.6L386.3 191.7L387.3 194.9L386.6 198.6L385.1 200.7L385.6 203.4L388.0 205.5L387.8 206.2L385.8 207.1L384.7 209.1L387.0 209.8L387.1 213.1L387.9 212.1L388.4 213.3L391.1 214.1L391.6 215.5L394.3 215.7L396.4 214.8L398.2 215.9L401.5 216.5L401.0 217.5L405.4 218.0L405.4 217.2L410.9 216.8L412.1 214.9L415.1 213.9L421.0 216.6L427.5 216.3L428.2 215.7L432.9 216.3L434.1 215.2L435.8 216.1L439.9 215.8L442.6 213.7L446.1 215.1L447.0 214.7L447.3 212.6L445.6 210.5L446.4 207.4L445.8 206.9L447.3 206.3L446.3 205.4L445.4 202.4L438.6 202.3L436.9 199.4L438.4 196.8L442.2 196.8L443.6 197.7L444.7 196.5L446.1 196.4L449.6 194.2L450.5 194.5L451.0 196.1L452.8 195.3L453.5 196.1L458.6 192.3L458.5 190.8L457.2 190.4L457.5 189.2L462.1 188.0L462.6 186.8L466.4 184.7L468.2 181.2L471.9 178.6L476.8 178.7L478.4 177.3L480.6 177.2L483.3 174.5L487.0 173.4L488.9 171.5L487.4 170.3L488.0 168.9L492.2 167.6L493.8 166.1L495.1 165.8L497.3 168.6L501.0 169.5L500.6 168.6L502.5 169.2L502.6 170.0L504.6 169.8L505.7 170.6L506.3 169.2L508.2 169.5L508.6 168.3L510.1 169.5L510.1 168.1L511.4 168.4L512.1 167.4L514.0 167.8L514.5 165.8L516.1 165.0L516.9 165.7L520.2 164.3L524.8 168.1L522.7 171.3L525.3 169.7L527.5 172.1L527.5 173.2L528.9 173.2L528.9 174.8L530.9 177.3L531.1 178.4L529.3 178.3L528.8 180.4L526.8 181.9L528.0 182.1L528.5 183.4L528.4 181.2L530.6 179.6L532.4 179.8L533.3 181.6L535.2 182.3L536.4 184.9L537.8 185.5L540.1 184.8L544.4 187.9L543.6 190.7L545.1 191.7L544.6 194.4L542.4 194.0L539.4 197.3L538.4 197.0L535.8 199.7L536.5 201.8L536.0 203.0L540.8 209.1L540.4 210.1L535.4 208.4L535.6 206.8L534.0 205.1L532.3 204.6L530.5 204.7L528.9 206.3L523.4 206.5L519.7 208.4L518.2 211.0L515.5 211.7L514.1 214.4L513.1 214.0L511.9 215.7L510.4 215.5L508.6 218.0L506.3 219.0L505.0 218.4L503.4 219.7L501.8 223.0L503.1 224.5L502.9 230.0L504.1 230.5L501.3 233.4L501.5 236.9L499.5 238.6L498.8 240.7L497.8 240.8L496.7 242.4L494.8 242.7L493.9 244.1L492.9 247.8L495.8 249.3L495.4 253.3L493.9 255.2L493.4 257.7L492.2 257.9L492.0 259.4L490.6 260.5L488.1 265.4L485.0 275.1L480.9 273.0L478.6 273.5L477.6 271.9L475.2 271.8L474.6 272.8L474.0 272.4L473.0 273.2L471.3 270.5L470.0 269.9L469.7 270.4L471.7 278.4L471.0 284.3L470.2 285.0L470.7 289.3L469.0 291.9L467.0 290.8L465.9 291.1L466.6 293.8L465.4 295.8L465.4 298.6L466.2 300.1L465.6 301.4L467.0 303.4L467.3 306.7L466.2 307.1L466.4 308.5L464.3 308.1L464.7 310.0L463.7 309.9L463.7 312.3L462.7 311.4L461.8 313.2L461.0 310.7L458.0 308.9L457.7 311.7L456.2 312.4L454.9 298.7L453.4 294.1L451.9 293.3L452.3 290.9L451.5 287.3L452.5 287.2L450.2 277.6L449.5 277.6L449.0 279.0L447.8 277.3L446.2 279.1L444.2 277.4L444.5 282.4L442.2 283.9L440.6 286.0L442.0 290.2L438.0 293.3L436.6 292.1L435.8 288.2L434.2 286.3L433.6 288.2L434.2 290.7L432.9 289.9L431.9 285.6L432.4 284.9L429.4 279.5L429.4 278.6L430.2 279.1L430.4 278.3L429.3 278.2L429.4 277.2L430.6 277.1L431.2 275.3L430.8 273.4L431.6 273.5L432.1 272.0L433.5 272.5L433.4 269.8L437.5 270.5L438.3 269.9L438.9 267.3L439.3 268.8L440.6 269.2L440.4 267.1L442.3 267.5L443.2 269.2L443.6 265.3L444.3 264.9L445.0 265.6L444.5 264.3L446.9 264.5L448.1 263.6L447.9 261.5L449.2 261.6L450.5 257.3L449.4 254.0L450.6 253.7L452.4 255.0L454.3 254.5L454.1 253.0L452.8 252.7L452.9 251.4L446.2 248.3L440.4 248.5L440.3 249.2L439.5 248.8L438.4 249.5L437.9 248.5L435.2 249.3L431.5 247.9L423.9 248.8L422.4 248.3L421.6 248.9L420.3 248.7L420.3 248.1L416.1 249.1L410.1 247.5L407.3 246.0L404.8 246.1L405.8 239.5L404.6 235.7L405.8 233.1L404.7 233.1L405.6 232.4L403.8 231.2L404.1 230.2L403.3 228.9L402.1 228.7L402.0 227.2L401.2 227.4L401.6 228.6L400.4 228.8L401.1 229.6L400.5 230.0L401.1 229.9L401.5 230.8L400.6 230.7L400.1 232.6L399.4 231.9L397.4 231.8L397.3 231.0L396.0 231.8L394.2 230.7L393.7 229.5L392.3 229.2L391.3 226.4L391.9 225.6L391.0 225.6L391.0 224.1L389.3 223.7L388.6 222.8L387.7 223.8L388.5 225.4L389.2 225.0L389.3 226.2L390.5 226.1L390.3 227.2L388.6 227.2L387.5 226.2L386.5 227.4L385.6 225.8L383.2 226.7L383.3 226.1L384.0 226.2L383.4 225.6L384.7 225.0L383.9 225.3L383.9 224.2L382.4 222.6L381.3 222.8L378.9 221.1L378.3 219.5L377.0 222.3L377.4 223.0L377.7 222.2L379.8 222.8L380.6 224.8L379.4 224.5L377.4 226.4L377.4 227.6L374.2 229.0L374.3 231.5L372.5 233.7L372.7 235.4L373.7 236.5L375.9 235.8L379.3 238.7L379.1 240.0L380.1 240.3L380.9 241.8L383.8 242.6L385.9 241.5L386.5 244.7L389.6 246.0L389.6 246.7L388.6 246.9L388.0 248.7L386.5 247.7L385.8 248.6L384.1 247.8L381.4 248.5L379.1 247.8L379.3 251.3L378.3 253.1L377.2 253.2L377.0 254.6L375.6 254.4L375.0 252.8L373.4 253.3L374.1 254.8L371.1 258.6L373.4 261.7L377.1 264.4L379.1 264.4L381.1 266.1L381.5 265.5L384.5 266.4L384.7 269.0L383.8 269.6L384.6 270.9L384.4 272.1L385.1 272.4L383.2 274.6L381.5 274.8L382.0 275.7L381.2 276.3L381.2 279.0L381.9 279.2L381.6 279.9L382.8 279.8L384.7 282.4L385.7 282.1L384.7 285.8L383.8 286.0L384.2 286.9L385.5 287.6L385.9 286.9L389.3 287.7L387.0 290.0L387.2 291.9L386.5 291.8L386.8 293.2L387.4 292.9L387.8 294.4L388.8 295.1L387.8 296.8L388.7 298.1L388.3 300.7L389.3 302.6L389.1 305.5L389.9 306.1L389.3 306.2L391.2 308.9L390.1 310.0L390.6 313.2L389.9 313.5L389.7 312.6L389.2 314.2L390.0 314.9L389.5 315.8L391.1 319.4L389.8 318.9L390.2 319.7L389.5 320.0L388.5 318.8L387.9 319.4L387.1 316.6L386.4 316.5L387.0 317.0L386.6 319.6L386.0 319.5L385.9 318.3L385.7 318.9L384.2 318.3L383.9 314.8L384.4 312.5L385.3 311.7L384.9 310.5L383.6 310.7L384.3 311.9L382.7 310.5L381.2 315.7L381.0 314.5L380.6 314.9L380.2 314.2L380.6 313.1L379.4 314.1L380.0 315.0L379.2 315.7L379.7 316.3L379.2 319.8L378.7 317.6L378.3 320.2L378.3 317.6L377.6 317.4L377.7 318.4L376.0 317.3L376.5 320.6L375.4 320.8L373.8 313.0L374.9 310.8L374.6 308.7L371.2 307.6L373.2 308.3L374.4 309.8L371.8 311.7L370.3 315.0L368.6 315.8L367.2 318.1L358.8 320.4L359.3 321.0L354.0 321.3L354.2 322.1L353.1 322.5L350.4 325.7L349.1 329.2L351.8 335.7L351.7 336.4L349.9 336.5L352.2 336.6L352.4 337.8L351.0 337.9L351.7 338.1L353.6 337.6L348.0 341.9L347.4 341.3L347.9 341.9L346.9 343.9L348.4 344.5L348.1 345.4L346.3 346.2L348.6 345.1L343.4 348.5L340.9 352.7L339.6 352.2L340.7 352.9L325.3 358.1L316.5 364.6L316.0 364.2L316.8 364.5L313.5 366.5L311.4 369.7L310.5 369.8L310.5 370.5L311.3 369.9L307.0 376.3L302.9 381.3L298.5 385.0L298.9 385.9L288.5 391.5L288.5 392.4L286.7 393.6L282.1 400.2L270.6 406.4L265.2 411.4L264.3 414.4L266.3 415.5L265.7 412.3L266.5 413.7L266.0 417.3L264.6 418.0L266.5 417.7L265.4 420.0L264.4 418.2L265.1 420.0L264.5 420.9L265.3 420.8L254.4 425.8L254.5 424.7L254.3 425.9L251.2 425.1L251.3 424.6L246.1 426.3L243.8 432.6L243.4 432.1L241.0 435.7L241.6 436.8L240.8 436.5L241.3 436.8L240.0 437.8L239.1 436.9L239.7 437.7L238.0 437.9L237.3 435.0L235.1 434.3L231.0 435.6L227.4 438.6L226.3 442.6L224.5 445.4L223.4 450.4L224.0 455.8L225.9 460.2L225.1 460.7L226.1 460.7L225.6 465.2L224.5 467.1L225.0 467.4L224.9 470.7L227.2 475.9L226.9 478.8L228.9 486.3L225.4 502.6L220.4 510.8L218.1 518.5L218.2 522.3L219.4 524.8L218.1 524.4L219.5 525.0L219.9 528.5L219.3 535.7L220.2 546.1L218.9 546.5L215.8 544.8L214.6 545.7L215.2 545.1L212.6 545.0L213.6 545.8L211.3 545.6L209.5 546.7L208.3 549.2L208.8 551.3L203.7 558.1L202.2 562.2L203.5 565.3L207.5 566.4L201.6 567.0L196.2 569.5L192.3 570.2L188.8 573.8L188.4 577.0L187.8 576.8L189.2 576.3L189.1 576.8L187.5 579.2L187.8 582.0L186.7 584.5L180.6 588.6L177.7 589.3L177.1 590.5L172.9 589.5L167.1 585.0L158.5 574.0L159.5 572.6L160.8 572.6L159.4 572.2L158.4 573.3L157.0 569.5L157.5 568.6L157.1 569.1L156.2 567.1L156.9 569.2L154.9 564.4L152.8 552.9L153.7 553.0L153.4 551.3L152.5 552.1L151.6 549.3L152.2 548.2L151.2 548.2L149.0 541.5L149.6 541.2L148.8 541.3L146.9 536.6L147.5 535.7L146.7 535.6L146.7 536.3L145.1 529.6L145.8 529.4L144.8 528.9L143.5 525.4L143.9 524.8L141.3 522.3L139.8 517.7L136.5 514.9L135.6 512.6L133.5 511.9L126.7 495.4L127.4 495.2L126.5 493.9L126.5 494.9L124.2 485.1L124.6 483.0L123.6 479.5L124.7 479.3L123.8 478.4L123.6 479.3L119.3 466.7L120.8 467.2L119.0 466.1L117.9 461.9L118.4 461.2L117.1 461.5L116.7 460.2L117.7 459.9L116.2 459.5L116.5 457.8L113.4 456.5L113.1 455.9L114.3 455.5L114.3 454.8L113.3 455.0L112.1 453.8L111.8 451.8L109.6 450.3L110.5 449.3L109.4 445.4L107.3 443.9L109.1 444.0L109.1 443.4L107.4 442.8L108.0 441.9L107.1 442.2L106.4 440.3L107.4 439.0L106.3 439.6L106.0 437.5L104.9 437.1L105.1 435.8L103.8 433.6L102.2 433.2L101.2 431.0L101.1 427.9L100.0 425.4L100.7 424.6L99.6 424.3L101.4 423.7L99.6 424.1L99.8 423.0L98.6 421.8L99.0 420.8L99.3 422.2L100.9 422.0L99.6 421.6L99.3 421.0L100.3 420.8L98.7 420.2L99.7 419.5L100.1 420.2L100.0 419.4L98.9 419.6L99.1 418.2L98.4 417.4L99.1 415.4L98.2 415.7L98.0 413.0L98.8 412.6L97.9 412.3L97.5 411.0L98.1 412.0L98.7 411.3L98.0 411.2L98.5 410.4L96.3 406.1L97.6 406.8L98.3 406.2L97.2 406.2L96.0 404.1L96.7 403.4L95.3 400.9L96.7 400.3L95.3 399.7L94.4 395.3L95.1 395.3L93.7 394.0L94.4 393.2L93.3 393.1L94.4 392.2L93.1 392.2L93.4 391.1L92.6 391.0L92.5 388.2L91.5 387.7L92.1 386.5L94.0 387.6L94.6 389.1L93.6 386.2L94.3 385.6L93.3 386.7L91.3 385.1L91.0 381.2L92.1 381.3L92.8 382.5L92.2 381.3L91.3 381.1L90.1 378.3L90.3 376.0L91.5 375.5L93.0 377.7L92.4 374.9L91.4 375.0L91.0 374.1L91.7 374.2L91.8 373.1L92.4 373.1L91.9 372.7L93.9 371.6L92.7 371.9L92.4 368.3L91.5 370.2L92.0 371.1L90.4 371.8L89.1 374.1L89.6 368.6L88.9 369.4L88.7 368.7L89.8 366.9L88.9 368.2L88.8 366.0L90.9 366.3L90.1 365.1L89.3 365.5L88.5 364.9L88.0 362.7L90.6 361.5L87.8 361.5L87.4 357.1L86.4 355.1L86.9 354.7L86.5 353.4L87.4 352.6L88.0 353.2L87.3 350.6L88.7 347.8L88.0 347.6L88.2 346.3L89.6 344.6L89.5 343.2L90.8 341.4L91.0 339.4L89.8 337.2L91.4 336.8L90.2 337.0L90.0 335.5L89.6 336.2L88.8 333.8L90.1 333.1L89.8 332.6L88.2 333.4L87.8 332.0L87.7 331.0L89.9 331.3L89.0 330.9L89.5 330.2L88.7 330.6L87.2 330.1L88.8 328.4L86.7 328.9L85.9 330.3L86.0 327.9L87.9 328.0L86.0 327.2L86.0 326.0L85.3 326.1L86.8 325.0L86.2 324.3L87.2 322.7L88.3 323.0L87.7 322.4L86.1 323.1L86.8 322.0L89.4 319.8L89.6 318.7L91.3 318.6L84.2 318.8L85.6 313.9L88.0 312.7L86.1 312.7L84.1 314.0L83.6 313.1L84.9 308.1L86.2 307.7L88.2 308.5L89.4 306.9L90.4 307.4L91.1 306.7L89.6 306.4L88.0 307.4L83.9 306.0L82.1 307.9L81.2 305.2L80.8 306.3L80.2 305.8L80.3 307.0L79.4 307.1L79.7 309.9L78.5 311.8L77.6 311.6L78.5 311.9L78.7 313.5L77.2 312.9L78.8 313.8L78.9 315.6L78.1 314.9L77.3 315.8L78.6 316.7L79.8 319.5L78.5 323.0L75.9 325.7L76.2 328.1L70.1 330.7L70.6 331.3L69.8 330.7L69.7 331.6L65.2 332.9L63.9 334.6L55.3 337.9L53.4 337.4L52.3 338.2L45.8 335.2L40.0 330.9L33.4 322.8L26.1 316.3L25.8 314.9L25.1 315.3L22.5 312.7L17.3 305.9L18.2 303.8L19.9 302.4L19.2 304.2L22.1 303.6L21.5 305.8L22.7 306.9L24.8 305.5L27.4 305.4L28.2 303.5L28.9 304.9L29.5 304.7L29.2 305.5L30.1 304.7L30.9 305.5L30.5 304.9L32.0 302.6L33.3 304.0L33.9 303.0L35.6 303.1L35.4 302.2L36.8 301.1L40.3 301.2L42.2 298.5L41.9 297.6L42.9 296.9L43.6 294.3L45.4 292.6L44.6 292.4L43.7 293.5L42.4 293.1L41.2 290.9L41.2 292.9L40.1 293.2L39.4 292.2L39.6 293.4L38.9 293.8L37.2 293.6L35.3 294.5L34.9 293.8L34.7 294.7L32.4 295.5L32.0 296.7L31.2 296.7L31.7 297.2L29.1 296.7L29.1 296.1L26.8 296.4L25.2 295.6L25.2 294.6L25.0 295.6L22.8 295.3L22.7 294.6L22.2 295.3L19.9 293.2L18.7 293.1L18.8 292.4L18.2 292.8L18.2 292.2L17.7 292.6L12.2 289.0L13.3 289.3L10.8 287.3L11.6 287.6L11.3 287.1L12.2 287.0L11.6 286.3L12.6 286.0L10.6 284.9L11.1 284.8L9.2 282.9L9.4 282.1L8.4 282.5L8.7 281.0L7.9 281.9L10.3 277.6L15.0 274.4L12.2 274.8L9.9 276.9L8.5 276.6L8.7 277.2L8.0 277.1L8.0 275.6L6.7 280.2L5.0 280.9L5.0 279.6L4.6 280.6L3.2 279.7L6.5 277.4L6.0 277.0L5.1 278.0L4.9 277.3L4.7 278.6L3.6 277.5L3.9 275.3L4.8 275.3L5.2 273.7L6.2 273.7L6.5 272.7L6.8 273.2L13.9 272.6L14.2 266.4L15.0 265.7L15.9 267.7L17.4 266.1L18.5 267.5L20.3 266.5L22.1 267.3L24.4 266.4L29.6 266.2L32.0 268.5L37.3 268.6L39.1 266.1L47.6 263.6L48.2 263.9L47.5 264.9L47.7 267.0L50.1 267.6L53.3 267.1L53.9 266.7L53.5 265.9L57.9 263.8L55.6 262.8L55.4 260.0L57.4 258.3L54.5 253.4L53.4 248.9L49.6 244.3L49.3 238.0L44.0 238.5L42.1 237.7L38.9 233.2L38.7 230.7L40.3 227.0L40.4 221.3L38.2 220.0L33.3 220.0L27.8 216.7L28.1 212.1L29.3 208.7L37.5 200.8L39.5 195.9L44.0 191.8L47.5 191.5L49.6 193.6L51.2 197.6L53.1 197.9L59.6 195.3L68.0 194.4L72.2 192.8L73.1 189.2L78.0 184.1L80.8 177.3L91.9 171.1L97.8 160.8L100.0 153.5L107.7 150.6L110.7 148.1L109.1 144.7L110.8 143.1L109.9 143.2L110.0 142.3L110.6 142.8L111.5 141.3L112.6 141.5L113.0 139.8L116.6 137.3L116.1 136.6L118.3 134.8L119.0 133.2L121.2 132.2L121.8 130.9L124.1 130.4L124.0 129.5L122.5 129.3L121.9 130.4L120.7 129.4L121.5 124.7L123.4 123.4L123.1 122.3L121.9 122.0L122.6 120.7L120.3 117.6L121.6 116.8L122.5 114.2L126.5 112.8L127.5 111.0L130.0 111.3L133.1 110.6L133.6 109.6L134.3 110.2L135.7 107.8L136.7 107.5L135.8 105.1L133.3 103.5L132.3 103.8L131.8 102.5L130.3 102.1L128.9 103.1L127.6 102.2L124.0 102.3L123.1 99.7L124.2 98.8L123.4 98.0L124.3 95.2L123.1 95.7L123.1 97.0L120.7 97.1L119.5 95.9L118.2 96.6L109.5 91.2L107.9 91.8L104.6 90.2L105.1 87.8L103.5 83.9L104.4 81.5L103.3 79.4L103.7 74.2L102.2 71.6L101.7 66.6L100.1 64.4L101.0 60.8L103.2 60.2L104.7 60.8L106.2 56.7L109.9 55.8L111.7 54.5L113.3 48.9L106.6 47.6L105.6 45.3L106.2 43.6L107.5 43.0L107.1 41.5L100.2 41.4L98.7 38.7L97.2 38.8L94.8 37.2L96.4 36.3L96.3 35.2L90.7 35.0L89.4 34.3L87.3 35.5L84.7 35.0L83.6 34.0L84.7 31.8L83.9 29.8L84.8 26.9L86.9 26.5L92.0 22.5L94.1 19.9L93.6 18.4L95.8 17.4L100.3 16.8L104.9 17.9L108.5 17.6L108.0 15.8L104.8 13.7L111.7 15.2L114.1 13.6L116.4 13.7L119.1 11.9L121.2 12.5L121.9 11.2L124.0 10.1L124.9 11.2L126.3 10.7L128.0 13.2L129.1 12.1L132.5 11.3L134.3 12.6L137.6 13.1L138.1 17.0L141.1 16.5L144.3 17.5L146.7 19.3L148.3 22.2L162.8 31.2L167.1 35.6L172.6 37.6L176.5 42.3ZM479.3 607.1L481.4 611.9L480.8 612.1L481.3 612.8L480.5 613.9L480.6 615.8L479.7 615.7L479.2 616.9L478.5 614.3L477.1 612.1L476.0 611.7L475.8 609.4L476.3 608.3L479.3 607.1ZM477.2 603.5L478.0 604.7L475.9 607.0L475.6 604.6L477.0 604.2L477.0 603.1L477.2 603.5ZM470.6 591.6L472.0 593.4L472.1 594.6L471.5 594.0L469.9 594.2L470.1 593.2L469.5 593.5L469.5 592.1L470.6 591.6ZM473.6 587.3L473.8 588.4L473.0 589.0L474.0 591.3L473.1 592.0L472.8 591.2L473.8 590.7L472.8 591.0L472.2 588.7L473.6 587.3ZM455.2 534.4L456.0 534.9L456.1 536.2L455.5 536.1L456.6 536.8L456.5 538.6L455.2 540.2L455.8 540.6L454.8 541.9L452.2 541.5L452.8 539.4L452.2 536.2L454.4 534.2L455.2 534.4ZM458.2 507.5L458.2 508.7L459.2 508.6L458.9 510.9L458.3 511.0L459.8 511.0L458.8 511.4L459.4 512.0L458.5 513.5L458.8 514.1L459.7 513.3L459.9 514.1L459.2 518.1L458.2 518.0L458.4 518.7L457.5 519.1L458.1 519.7L458.6 518.5L459.2 518.8L458.4 522.5L457.2 521.7L457.2 520.7L456.7 520.9L456.4 519.7L457.1 519.4L456.4 519.3L456.3 517.8L455.7 518.2L455.4 515.1L454.7 515.1L455.6 513.2L456.5 515.1L456.7 510.0L458.2 507.5ZM460.4 505.9L461.6 506.3L461.5 508.1L460.8 508.1L461.1 508.7L460.3 508.8L459.4 510.8L458.9 510.1L459.6 507.3L458.9 507.1L459.5 505.8L460.4 505.9ZM461.9 493.8L463.4 497.8L462.6 499.7L463.2 502.2L462.2 504.0L461.9 502.9L460.8 502.6L461.5 503.8L460.1 502.9L461.7 505.6L458.9 506.1L458.1 505.5L457.9 499.8L459.1 498.7L459.7 499.3L459.8 498.0L458.8 498.6L458.6 495.6L459.7 495.5L459.9 494.2L461.2 494.5L461.9 493.8ZM464.5 481.1L463.9 483.5L464.9 483.7L465.4 485.4L462.9 485.2L464.9 486.7L464.4 490.9L463.0 491.9L462.7 490.1L462.5 491.0L461.7 490.2L462.1 490.9L461.5 491.2L462.1 491.2L462.6 492.7L462.0 493.1L461.9 492.2L461.0 494.4L460.1 494.0L459.9 492.5L460.6 491.8L459.8 491.7L459.9 490.2L460.3 490.6L460.2 489.5L460.9 489.3L460.2 489.0L461.0 487.3L460.4 486.7L460.7 484.7L461.5 484.3L460.8 484.0L461.5 483.9L461.3 482.7L462.4 482.1L462.3 481.4L463.5 481.4L464.3 480.5L464.5 481.1ZM374.0 316.3L373.6 319.3L371.8 319.2L373.2 314.7L374.0 316.3Z"/>
+        <path class="route" d="M227.5 490.4 Q160 300 129.8 80"/>
+        <path class="route" d="M227.5 490.4 Q120 360 53.8 214"/>
+        <g class="pin" data-r="hq" transform="translate(227.5 490.4)"><circle class="pulse" r="10"/><circle class="dot" r="6"/><text x="12" y="4">CHENNAI · HQ</text></g>
+        <g class="pin" data-r="north" transform="translate(129.8 80)"><circle class="pulse" r="10"/><circle class="dot" r="6"/><text x="12" y="4">FORWARD AREAS</text></g>
+        <g class="pin" data-r="thar" transform="translate(53.8 214)"><circle class="pulse" r="10"/><circle class="dot" r="6"/><text x="12" y="-8">THAR</text></g>
+        <g class="pin pin-partner" data-r="partner" transform="translate(86 287.6)"><circle class="dot" r="5"/><text x="10" y="4">GANDHINAGAR</text></g>
+      </svg>
+      <p class="map-tag mono">Regions indicative · Boundary per official map of India (DataMeet / Survey of India)</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section section-dark" id="applications">
+  <div class="wrap">
+    <p class="eyebrow mono">11 / Applications</p>
+    <h2 class="h2">Built for defence.<br>Ready for more.</h2>
+    <div class="apps">
+      <article class="app"><div class="app-img"><img src="assets/img/land-drone-sand.webp" alt="Tracked land drone on sand" loading="lazy"></div><h3>Defence</h3><p>Surveillance, perimeter patrol, anti-tank and forward-base logistics.</p></article>
+      <article class="app"><div class="app-img"><img src="assets/img/proto-field.webp" alt="KAL-M tracked prototype" loading="lazy"></div><h3>Mobility</h3><p>Autonomous movement of loads across ground that vehicles can't reach.</p></article>
+      <article class="app"><div class="app-img"><img src="assets/img/surv-dome.webp" alt="Tracked robot with dome camera" loading="lazy"></div><h3>Industries</h3><p>Inspection and material transport in hazardous and remote sites.</p></article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <p class="eyebrow mono">12 / Why KAL-M</p>
+    <h2 class="h2">Why we stand out.</h2>
+    <blockquote class="quote">Time is our strength. Precision planning is our strategy. <span>Relentless execution is our identity.</span><cite class="mono">Harish Vardhana, Founder</cite></blockquote>
+    <div class="why">
+      <div><span class="why-n mono">01</span><h3>Hardened with the forces</h3><p>Designed alongside soldiers at forward posts, not in a lab. Trial, break, redesign, redeploy, overnight.</p></div>
+      <div><span class="why-n mono">02</span><h3>Rapid manufacturing</h3><p>3D-printed structures mean field fixes in a day and fast scaling to volume.</p></div>
+      <div><span class="why-n mono">03</span><h3>Modular by design</h3><p>One base, many mission modules. Lower cost, simpler logistics, faster delivery.</p></div>
+      <div><span class="why-n mono">04</span><h3>Made in India</h3><p>Designed, built and supported in Chennai, for Indian conditions from the Thar to the high Himalaya.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section section-dark" id="partners">
+  <div class="wrap">
+    <p class="eyebrow mono">13 / Partners &amp; ecosystem</p>
+    <h2 class="h2">In good company.</h2>
+    <div class="partners">
+      <span class="pl pl-key">Rudram Dynamics<small>Strategic defence partner</small></span>
+      <span class="pl">TANCAM</span><span class="pl">TIDCO</span><span class="pl">Dassault Systèmes</span>
+      <span class="pl">FORGE</span><span class="pl">SIPCOT</span><span class="pl">FORT</span>
+      <span class="pl">Govt. of Tamil Nadu</span><span class="pl">DRDO</span><span class="pl">Digital India</span>
+      <span class="pl">Bhashini</span><span class="pl">Gujarat National Law University</span>
+    </div>
+    <p class="map-tag mono">Logo files to replace names</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow mono">14 / Mission</p>
+      <h2 class="h2">Building for Bharat.<br>Building with purpose.</h2>
+      <p class="lead-xl">Our mission is to give India's forces <mark>autonomous ground robots</mark> that are designed, tested and improved <mark>at the speed of the front line</mark>.</p>
+      <p class="map-tag mono">DRAFT · to be confirmed</p>
+    </div>
+    <div class="founders">
+      <article class="founder">
+        <div class="fimg ph" data-label="Photo"></div>
+        <div><h3>Harish Vardhana</h3><p class="mono role">FOUNDER &amp; DIRECTOR</p><p>8+ years in robotics and AI. Co-founded RoboThoughts AI and built the first real-time RobotCop for Chennai City Police.</p></div>
+      </article>
+      <div class="talent">
+        <b>250+</b>
+        <p><span class="mono">Engineers trained</span>Our own talent pipeline for hiring and scaling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta" id="contact">
+  <div class="bars" aria-hidden="true"></div><div class="bars bars-r" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="h2">Ready for the frontline?</h2>
+    <p class="muted">Investors, defence partners and integrators: talk to the founder.</p>
+    <div class="hero-cta center">
+      <a class="btn" href="mailto:harish@kal-m.com?subject=Investor%20enquiry%20-%20KAL-M">harish@kal-m.com</a>
+      <a class="btn btn-ghost" href="tel:+918008004375">+91 80080 04375</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="tricolour" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap foot">
+    <div>
+      <span class="brand-mark">KAL-M</span>
+      <p class="muted small">KAL-M Robotics and Innovations Pvt Ltd<br>Chennai, Tamil Nadu, India</p>
+    </div>
+    <p class="made mono"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#FF9933"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.7" fill="none" stroke="#000080" stroke-width=".45"/><g stroke="#000080" stroke-width=".2"><line x1="12.40" y1="10.00" x2="17.60" y2="10.00"/><line x1="12.49" y1="9.33" x2="17.51" y2="10.67"/><line x1="12.75" y1="8.70" x2="17.25" y2="11.30"/><line x1="13.16" y1="8.16" x2="16.84" y2="11.84"/><line x1="13.70" y1="7.75" x2="16.30" y2="12.25"/><line x1="14.33" y1="7.49" x2="15.67" y2="12.51"/><line x1="15.00" y1="7.40" x2="15.00" y2="12.60"/><line x1="15.67" y1="7.49" x2="14.33" y2="12.51"/><line x1="16.30" y1="7.75" x2="13.70" y2="12.25"/><line x1="16.84" y1="8.16" x2="13.16" y2="11.84"/><line x1="17.25" y1="8.70" x2="12.75" y2="11.30"/><line x1="17.51" y1="9.33" x2="12.49" y2="10.67"/></g></svg><span>Proudly designed, built and<br>field-tested in India</span></p>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/company/kal-m-robotics-and-innovations" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <a href="mailto:harish@kal-m.com">Email</a>
+    </div>
+  </div>
+  <p class="wrap small muted copy">© 2026 KAL-M Robotics and Innovations Pvt Ltd</p>
+</footer>
+
+<!-- INVESTOR BRIEFING -->
+<div class="brief dossier" id="brief" role="dialog" aria-modal="true" aria-labelledby="briefTitle" hidden>
+  <div class="brief-inner">
+    <header class="brief-head">
+      <p class="mono">INVESTOR BRIEFING · KAL-M ROBOTICS AND INNOVATIONS PVT LTD · OCT 2026</p>
+      <button class="brief-close" id="briefClose" aria-label="Close briefing">✕</button>
+    </header>
+    <h2 class="h2" id="briefTitle">Modular autonomous ground robots.<br>Field-proven in India.</h2>
+    <div class="brief-grid">
+      <section class="bcell bcell-wide">
+        <h3 class="mono">TRACTION</h3>
+        <div class="bstats">
+          <div><b>₹27L+</b><span>Grants secured</span></div>
+          <div><b>₹2–25 Cr</b><span>Defence pipeline</span></div>
+          <div><b>20+</b><span>Field iterations with the Army</span></div>
+          <div><b>12,000 ft</b><span>Altitude tested</span></div>
+          <div><b>3</b><span>Patents (GPS-denied nav)</span></div>
+          <div><b>Since 2020</b><span>Building UGVs</span></div>
+        </div>
+      </section>
+      <section class="bcell">
+        <h3 class="mono">WHAT WE BUILD</h3>
+        <p>One tracked base platform with swappable mission modules (surveillance, anti-tank, cargo), running by remote or autonomously, configured and built to order.</p>
+      </section>
+      <section class="bcell">
+        <h3 class="mono">FIELD PROOF</h3>
+        <ul>
+          <li>May 2025: 12,000 ft, 6°C, 150 kg payload, 30° climb</li>
+          <li>Nov 2025: CDIIC Defence Conclave (BEML · DGQA · MoD)</li>
+          <li>Mar 2026: Two days with the NSG</li>
+          <li>Oct 2025: 3D-printed kamikaze land drone tested</li>
+          <li>Nov–Dec 2025: 20-day forward deployment, unit handed over</li>
+        </ul>
+      </section>
+      <section class="bcell">
+        <h3 class="mono">WHY WE WIN</h3>
+        <ul>
+          <li>Built alongside the forces, redesigned overnight</li>
+          <li>3D-printed structure: fast repair, no tooling</li>
+          <li>One platform, many missions: lower cost</li>
+        </ul>
+      </section>
+      <section class="bcell">
+        <h3 class="mono">PARTNERS &amp; BACKERS</h3>
+        <p>Rudram Dynamics (strategic defence partner) · FORGE · TANCAM · TIDCO · Dassault Systèmes CoE</p>
+      </section>
+      <section class="bcell">
+        <h3 class="mono">TEAM</h3>
+        <p><b>Harish Vardhana</b>, Founder &amp; Director: 8+ yrs robotics &amp; AI, built the Chennai Police RobotCop.<br>250+ engineers trained: in-house hiring pipeline.</p>
+      </section>
+      <section class="bcell bcell-ask">
+        <h3 class="mono">THE ASK</h3>
+        <p class="pending">Round size and use of funds: to be added</p>
+      </section>
+    </div>
+    <div class="brief-cta">
+      <a class="btn" href="mailto:harish@kal-m.com?subject=Investor%20Briefing%20-%20KAL-M">Email the founder</a>
+      <span class="btn btn-ghost is-disabled" aria-disabled="true">Pitch deck (PDF) · pending</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
