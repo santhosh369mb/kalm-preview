@@ -695,3 +695,72 @@ mark { color: var(--accent-lt); }
   opacity: 0; transform: translateY(14px) scale(.97); transition: opacity .45s ease, transform .55s cubic-bezier(.2,.7,.2,1); z-index: 1; }
 .cfg-img.on { opacity: 1; transform: none; }
 .cfg-caption { position: absolute; left: 0; right: 0; bottom: 6%; text-align: center; font-size: 12px; letter-spacing: .16em; color: var(--accent-lt); }
+
+
+/* field footage: robotic arm presenting the screen */
+.present { display: grid; grid-template-columns: 1.05fr 1fr; gap: 10px 30px; align-items: center; margin-top: 20px; }
+.arm-art { width: 100%; height: auto; overflow: visible; }
+.arm-upper { transform-origin: 80px 355px; transform: rotate(8deg); animation: armIdle 6s ease-in-out infinite; }
+.arm-fore { transform-origin: 80px 190px; transform: rotate(-4deg); animation: foreIdle 6s ease-in-out infinite; }
+@keyframes armIdle { 50% { transform: rotate(5deg); } }
+@keyframes foreIdle { 50% { transform: rotate(-1deg); } }
+.screen-wrap { min-width: 0; }
+.screen { position: relative; border: 1px solid var(--border); background: #000; aspect-ratio: 16 / 9; overflow: hidden;
+  box-shadow: 0 0 0 6px var(--panel), 0 0 0 7px var(--line), 0 30px 60px rgba(0,0,0,.5); }
+.screen video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.screen-tag { position: absolute; left: 14px; top: 12px; font-size: 11px; letter-spacing: .14em; color: #fff;
+  background: rgba(0,0,0,.55); padding: 5px 9px; }
+.screen-tag::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #e5484d; margin-right: 8px; animation: blink 1.6s infinite; }
+.thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+.thumb { position: relative; padding: 0; border: 1px solid var(--border); background: var(--panel); cursor: pointer; overflow: hidden; aspect-ratio: 16 / 9; opacity: .6; transition: opacity .3s, border-color .3s; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb span { position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 10px; text-align: left; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,.8), transparent); }
+.thumb:hover, .thumb.on { opacity: 1; }
+.thumb.on { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+@media (max-width: 760px) {
+  .present { grid-template-columns: 1fr; }
+  .arm-stage { height: 320px; }
+}
+
+.arm-stage { position: relative; height: clamp(380px, 46vw, 600px); }
+.arm-stage canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
+.arm-fallback { position: absolute; inset: 0; margin: auto; max-height: 100%; max-width: 100%; object-fit: contain; }
+.arm-stage.has3d .arm-fallback { display: none; }
+/* arm carries the clip: 3D canvas spans the whole section, clicks pass through */
+.present { position: relative; }
+.present > canvas.arm-canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; pointer-events: none; z-index: 3; }
+.carry { position: absolute; left: 0; top: 0; z-index: 2; pointer-events: none; opacity: 0; border: 1px solid var(--accent);
+  box-shadow: 0 12px 30px rgba(0,0,0,.6); overflow: hidden; transform-origin: 0 0; will-change: transform, opacity; }
+.carry img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.thumb.taken img { opacity: .25; }
+
+/* v3 layout: thumbnails | arm | screen (real pick-and-place: arm in the middle) */
+.present { grid-template-columns: minmax(150px, .55fr) minmax(260px, .85fr) 1.45fr; gap: 20px; align-items: center; }
+.present .thumbs { grid-template-columns: 1fr; margin-top: 0; gap: 16px; }
+.present .arm-stage { height: clamp(420px, 40vw, 560px); }
+.present .screen-wrap { align-self: center; }
+@media (max-width: 1000px) {
+  .present { grid-template-columns: 1fr; }
+  .present .arm-stage, .present > canvas.arm-canvas { display: none; }
+  .present .screen-wrap { order: 1; }
+  .present .thumbs { order: 2; grid-template-columns: repeat(3, 1fr); }
+}
+.present .thumbs { align-self: end; margin-bottom: 30px; }
+/* let the arm rise above the section edge instead of being clipped */
+.present > canvas.arm-canvas { inset: auto; left: 0; top: -220px; width: 100% !important; height: calc(100% + 220px) !important; }
+/* no jump: the still picture only appears when 3D cannot run; the 3D arm fades in at its final place */
+.arm-fallback { display: none; }
+.arm-stage.no3d .arm-fallback { display: block; }
+.present > canvas.arm-canvas { opacity: 0; transition: opacity .6s ease; }
+.present > canvas.arm-canvas.ready { opacity: 1; }
+
+/* v4 alignment: one clean row - thumbs exactly as tall as the screen, arm base on the same bottom line */
+.present { grid-template-columns: minmax(170px, .5fr) minmax(240px, .72fr) 1.5fr; gap: 32px; align-items: stretch; }
+.present .thumbs { align-self: stretch; margin: 0; display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); gap: 14px; }
+.present .thumb { aspect-ratio: auto; height: 100%; }
+.present .arm-stage { height: auto; align-self: stretch; }
+.present .screen-wrap { align-self: start; }
+.present .thumbs { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.present .thumb img { position: absolute; inset: 0; }
+@media (min-width: 1001px) { #footage .present { margin-top: 170px; } }
+.present > canvas.arm-canvas { height: calc(100% + 300px) !important; }   /* 220 px above + 80 px below: base never clipped */

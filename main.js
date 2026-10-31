@@ -212,4 +212,29 @@
       swName.textContent = sw.getAttribute("aria-label").toUpperCase();
     });
   });
+
+  // Field footage: thumbnails switch the big screen; play only while visible
+  var footVid = document.getElementById("footVid");
+  var footTag = document.getElementById("footTag");
+  var thumbs = document.querySelectorAll(".thumb");
+  var footVisible = false;
+  function playFoot() { if (footVisible && !reduce) { var p = footVid.play(); if (p && p.catch) p.catch(function () {}); } }
+  function swapFoot(t) {
+    footVid.poster = t.dataset.poster; footVid.src = t.dataset.src;
+    footTag.textContent = "LIVE TRIAL · " + t.dataset.name.toUpperCase();
+    playFoot();
+  }
+  thumbs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      if (t.classList.contains("on") || window.kalmArmBusy) return;
+      thumbs.forEach(function (o) { o.classList.toggle("on", o === t); o.setAttribute("aria-selected", o === t); });
+      // with the 3D arm loaded, the arm carries the clip to the screen and swaps it on arrival
+      if (window.kalmArmPick) window.kalmArmPick(t, function () { swapFoot(t); });
+      else swapFoot(t);
+    });
+  });
+  new IntersectionObserver(function (e) {
+    footVisible = e[0].isIntersecting;
+    if (footVisible) playFoot(); else footVid.pause();
+  }, { threshold: 0.3 }).observe(footVid);
 })();

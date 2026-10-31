@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="styles.css">
 <script src="main.js" defer></script>
 <script type="module" src="model.js?v=4"></script>
+<script type="module" src="arm.js?v=16"></script>
 </head>
 <body>
 
@@ -67,7 +68,7 @@
     </div>
     <div class="lu-divider" aria-hidden="true"><span>&rarr;</span></div>
     <div class="lu-missions">
-      <p class="lu-tag mono">One base. Every mission.</p>
+      <p class="lu-tag mono">One platform, many missions</p>
       <ol class="lu-row">
         <li><div class="lu-img"><img src="assets/img/v-surveillance.webp" alt="KAL-M surveillance version with dome camera"></div>
           <h3 class="lu-name">Surveillance</h3><p class="lu-text">Dome camera on the mount. Watch, patrol and report in real time.</p></li>
@@ -109,6 +110,35 @@
   </div>
 </section>
 
+<!-- FIELD FOOTAGE: robotic arm presents real terrain trials -->
+<section class="section section-dark" id="footage">
+  <div class="wrap">
+    <p class="eyebrow mono">Field footage</p>
+    <h2 class="h2">Real ground.<br>Real trials.</h2>
+    <div class="present" id="present">
+      <div class="carry" id="carry" aria-hidden="true"><img alt=""></div>
+      <div class="thumbs" role="tablist" aria-label="Terrain footage">
+          <button class="thumb on" role="tab" aria-selected="true" data-src="assets/video/terrain-sand.mp4" data-poster="assets/video/terrain-sand.jpg" data-name="Sand">
+            <img src="assets/video/terrain-sand.jpg" alt="" loading="lazy"><span class="mono">Sand</span></button>
+          <button class="thumb" role="tab" aria-selected="false" data-src="assets/video/terrain-grass.mp4" data-poster="assets/video/terrain-grass.jpg" data-name="Grass">
+            <img src="assets/video/terrain-grass.jpg" alt="" loading="lazy"><span class="mono">Grass</span></button>
+          <button class="thumb" role="tab" aria-selected="false" data-src="assets/video/terrain-pebbles.mp4" data-poster="assets/video/terrain-pebbles.jpg" data-name="Pebbles">
+            <img src="assets/video/terrain-pebbles.jpg" alt="" loading="lazy"><span class="mono">Pebbles</span></button>
+        </div>
+      <div class="arm-stage" id="armStage" aria-hidden="true">
+        <img class="arm-fallback" src="assets/img/arm.webp" alt="" loading="lazy">
+      </div>
+      <div class="screen-wrap">
+        <div class="screen">
+          <video id="footVid" src="assets/video/terrain-sand.mp4" poster="assets/video/terrain-sand.jpg" muted loop playsinline preload="metadata"></video>
+          <p class="screen-tag mono" id="footTag">LIVE TRIAL · SAND</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONFIGURATOR -->
 <section class="section section-dark" id="configurator">
   <div class="wrap config">
@@ -131,7 +161,7 @@
       <p class="mb-label mono">PRIMARY TERRAIN</p>
       <div class="chips" id="terrainChips">
         <button class="chip active">Desert sand</button><button class="chip">Gravel</button><button class="chip">Grassland</button>
-        <button class="chip">Riverbed</button><button class="chip">Snow</button><button class="chip">High altitude</button>
+        <button class="chip">High altitude</button>
       </div>
       <dl class="mod-spec mono" id="modSpec">
         <div><dt>BUILD</dt><dd id="specBuild">BRAVO · Base platform</dd></div>
