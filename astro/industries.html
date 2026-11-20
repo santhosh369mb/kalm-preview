@@ -5,10 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Industries | KAL-M Robotics</title>
-<meta name="description" content="KAL-M Robotics and Innovations, Chennai, India.">
+<meta name="description" content="One autonomous ground platform for agriculture, manufacturing and logistics: swap the attachment, keep the robot.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:title" content="Industries | KAL-M Robotics">
-<meta property="og:description" content="KAL-M Robotics and Innovations, Chennai, India.">
+<meta property="og:description" content="One autonomous ground platform for agriculture, manufacturing and logistics: swap the attachment, keep the robot.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kal-m.com/industries">
 <link rel="canonical" href="https://kal-m.com/industries">
@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=9">
-<script src="main.js?v=7" defer></script>
+<link rel="stylesheet" href="styles.css?v=10">
+<script src="main.js?v=8" defer></script>
 
 </head>
 <body>
@@ -40,85 +40,173 @@
 <main id="top">
 
 
-<section class="jr-intro">
-  <div class="wrap">
-    <p class="eyebrow mono">Industries</p>
-    <h1 class="h2">Industries</h1>
-    <p><span class="todo">Your line here</span></p>
+
+<section class="ind-hero">
+  <div class="wrap ind-hero-grid">
+    <div>
+      <p class="eyebrow mono">Industries</p>
+      <h1 class="h2">One platform.<br>Swap the attachment.</h1>
+      <p class="ind-lead">One autonomous ground platform that works even where GPS fails. Swap the attachment and it becomes a sprayer, a tug, a lifter or an inspector, built for the real world, where flying 24x7 isn't an option.</p>
+      <div class="ind-actions"><a class="btn" href="#find">Find your job</a><a class="btn btn-ghost" href="#pilot">Talk to us about a pilot</a></div>
+    </div>
+    <figure class="ind-base">
+      <img src="assets/img/v-base.webp" alt="KAL-M tracked UGV base platform" width="595" height="211">
+      <span class="ind-mount m1"><i></i>Attachment mount</span>
+      <span class="ind-mount m2"><i></i>Sensors and compute</span>
+      <span class="ind-mount m3"><i></i>Tracked drive and battery</span>
+    </figure>
   </div>
 </section>
 
 
-<section class="jr" aria-label="Industries journey">
+<section class="ind-sec" id="find" aria-labelledby="findTitle">
   <div class="wrap">
-    <div class="jr-map" id="jrMap">
-      <svg class="jr-route" aria-hidden="true" focusable="false">
-        <g class="jr-terrain"></g>
-        <path class="jr-ahead"></path>
-        <path class="jr-done"></path>
-      </svg>
-      <div class="jr-guide" aria-hidden="true">
-        <svg viewBox="-70 -48 190 96" width="190" height="96">
-          <defs>
-            <linearGradient id="jrBeam" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
-            <radialGradient id="jrSweep" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="scale(64)"><stop offset="0" stop-color="#8a74d6" stop-opacity=".55"></stop><stop offset="1" stop-color="#8a74d6" stop-opacity="0"></stop></radialGradient>
-          </defs>
-          <polygon points="48,-15 118,-36 118,-4" fill="url(#jrBeam)"></polygon><polygon points="48,15 118,4 118,36" fill="url(#jrBeam)"></polygon>
-          <g fill="#0e0e10" stroke="#2e2f35">
-            <rect x="-42" y="-36" width="22" height="11" rx="3"></rect><rect x="-11" y="-36" width="22" height="11" rx="3"></rect><rect x="20" y="-36" width="22" height="11" rx="3"></rect>
-            <rect x="-42" y="25" width="22" height="11" rx="3"></rect><rect x="-11" y="25" width="22" height="11" rx="3"></rect><rect x="20" y="25" width="22" height="11" rx="3"></rect>
-          </g>
-          <rect x="-50" y="-27" width="98" height="54" rx="10" fill="#202127" stroke="#44454e" stroke-width="1.5"></rect>
-          <rect x="-40" y="-19" width="50" height="38" rx="5" fill="#16171b"></rect>
-          <rect x="41" y="-23" width="8" height="46" rx="3" fill="#2b2c33"></rect>
-          <rect x="46" y="-19" width="3" height="9" rx="1" fill="#f4f4f4"></rect><rect x="46" y="10" width="3" height="9" rx="1" fill="#f4f4f4"></rect>
-          <text x="-15" y="4" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.5" fill="#e8e8e8" font-family="Barlow Condensed, Arial Narrow, sans-serif">KAL-M</text>
-          <g transform="translate(26 0)">
-            <circle r="10" fill="none" stroke="#8a74d6" stroke-width="1.5" opacity="0"><animate attributeName="r" values="10;70" dur="2.4s" repeatCount="indefinite"></animate><animate attributeName="opacity" values=".6;0" dur="2.4s" repeatCount="indefinite"></animate></circle>
-            <path d="M0 0 L62 -18 A64 64 0 0 1 62 18 Z" fill="url(#jrSweep)"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.4s" repeatCount="indefinite"></animateTransform></path>
-            <circle r="8.5" fill="#111114" stroke="#8a74d6" stroke-width="2"></circle><circle r="3" fill="#8a74d6"></circle>
-          </g>
-        </svg>
+    <p class="eyebrow mono">Find your job</p>
+    <h2 class="h2" id="findTitle">Pick your industry, then your job</h2>
+    <div class="ind-find" id="indFind">
+      <div class="ind-tabs" role="tablist" aria-label="Industry">
+        <button type="button" role="tab" class="ind-tab" data-ind="agri" aria-selected="true">Agriculture</button><button type="button" role="tab" class="ind-tab" data-ind="mfg" aria-selected="false">Manufacturing</button><button type="button" role="tab" class="ind-tab" data-ind="log" aria-selected="false">Logistics</button>
       </div>
-      <ol class="jr-stops">
-        <li class="jr-stop" data-stop="1">
-            <span class="jr-dot" aria-hidden="true"></span>
-            <div class="jr-card">
-              <p class="mono jr-num">Stop 1</p>
-              <h2 class="jr-title"><span class="todo">Topic from you</span></h2>
-              <p><span class="todo">Details from you</span></p>
-            </div>
-          </li><li class="jr-stop" data-stop="2">
-            <span class="jr-dot" aria-hidden="true"></span>
-            <div class="jr-card">
-              <p class="mono jr-num">Stop 2</p>
-              <h2 class="jr-title"><span class="todo">Topic from you</span></h2>
-              <p><span class="todo">Details from you</span></p>
-            </div>
-          </li><li class="jr-stop" data-stop="3">
-            <span class="jr-dot" aria-hidden="true"></span>
-            <div class="jr-card">
-              <p class="mono jr-num">Stop 3</p>
-              <h2 class="jr-title"><span class="todo">Topic from you</span></h2>
-              <p><span class="todo">Details from you</span></p>
-            </div>
-          </li><li class="jr-stop" data-stop="4">
-            <span class="jr-dot" aria-hidden="true"></span>
-            <div class="jr-card">
-              <p class="mono jr-num">Stop 4</p>
-              <h2 class="jr-title"><span class="todo">Topic from you</span></h2>
-              <p><span class="todo">Details from you</span></p>
-            </div>
-          </li><li class="jr-stop" data-stop="5">
-            <span class="jr-dot" aria-hidden="true"></span>
-            <div class="jr-card">
-              <p class="mono jr-num">Stop 5</p>
-              <h2 class="jr-title"><span class="todo">Topic from you</span></h2>
-              <p><span class="todo">Details from you</span></p>
-            </div>
-          </li>
-      </ol>
+      <div class="ind-body">
+        <div class="ind-panel" data-ind="agri">
+            <h3 class="ind-panel-name">Agriculture</h3>
+            <ul class="ind-jobs">
+              <li><button type="button" class="ind-job" data-job="Precision spray boom" data-what="Crop protection" data-ind-name="Agriculture" aria-pressed="true">
+                  <b>Precision spray boom</b><span>Crop protection</span></button></li><li><button type="button" class="ind-job" data-job="Seed drill / planter" data-what="Row sowing" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Seed drill / planter</b><span>Row sowing</span></button></li><li><button type="button" class="ind-job" data-job="Mechanical weeder" data-what="Chemical-free weeding" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Mechanical weeder</b><span>Chemical-free weeding</span></button></li><li><button type="button" class="ind-job" data-job="Soil sampling probe" data-what="Automatic core pickup" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Soil sampling probe</b><span>Automatic core pickup</span></button></li><li><button type="button" class="ind-job" data-job="Crop-scouting mast" data-what="Multispectral camera" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Crop-scouting mast</b><span>Multispectral camera</span></button></li><li><button type="button" class="ind-job" data-job="Granule spreader" data-what="Fertiliser and lime" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Granule spreader</b><span>Fertiliser and lime</span></button></li><li><button type="button" class="ind-job" data-job="Harvest carrier bin" data-what="Crate shuttle" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Harvest carrier bin</b><span>Crate shuttle</span></button></li><li><button type="button" class="ind-job" data-job="Fruit-picking arm" data-what="Orchard harvest" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Fruit-picking arm</b><span>Orchard harvest</span></button></li><li><button type="button" class="ind-job" data-job="Irrigation inspection kit" data-what="Drip-line leaks" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Irrigation inspection kit</b><span>Drip-line leaks</span></button></li><li><button type="button" class="ind-job" data-job="Weather and moisture mast" data-what="Field telemetry" data-ind-name="Agriculture" aria-pressed="false">
+                  <b>Weather and moisture mast</b><span>Field telemetry</span></button></li>
+            </ul>
+          </div><div class="ind-panel" data-ind="mfg" hidden>
+            <h3 class="ind-panel-name">Manufacturing</h3>
+            <ul class="ind-jobs">
+              <li><button type="button" class="ind-job" data-job="Tow hitch tug" data-what="Trolley and cart train" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Tow hitch tug</b><span>Trolley and cart train</span></button></li><li><button type="button" class="ind-job" data-job="Roller conveyor deck" data-what="Line-to-line transfer" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Roller conveyor deck</b><span>Line-to-line transfer</span></button></li><li><button type="button" class="ind-job" data-job="Pallet fork lift" data-what="Stores to line feed" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Pallet fork lift</b><span>Stores to line feed</span></button></li><li><button type="button" class="ind-job" data-job="Machine-tending arm" data-what="Load and unload" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Machine-tending arm</b><span>Load and unload</span></button></li><li><button type="button" class="ind-job" data-job="Thermal inspection mast" data-what="Motor and panel heat" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Thermal inspection mast</b><span>Motor and panel heat</span></button></li><li><button type="button" class="ind-job" data-job="Gas and air-quality kit" data-what="Safety rounds" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Gas and air-quality kit</b><span>Safety rounds</span></button></li><li><button type="button" class="ind-job" data-job="RFID inventory scanner" data-what="Yard and stores audit" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>RFID inventory scanner</b><span>Yard and stores audit</span></button></li><li><button type="button" class="ind-job" data-job="Quality camera gantry" data-what="In-line visual checks" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Quality camera gantry</b><span>In-line visual checks</span></button></li><li><button type="button" class="ind-job" data-job="Sweeper / scrubber deck" data-what="Floor and yard cleaning" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>Sweeper / scrubber deck</b><span>Floor and yard cleaning</span></button></li><li><button type="button" class="ind-job" data-job="UV disinfection module" data-what="Cleanroom upkeep" data-ind-name="Manufacturing" aria-pressed="false">
+                  <b>UV disinfection module</b><span>Cleanroom upkeep</span></button></li>
+            </ul>
+          </div><div class="ind-panel" data-ind="log" hidden>
+            <h3 class="ind-panel-name">Logistics</h3>
+            <ul class="ind-jobs">
+              <li><button type="button" class="ind-job" data-job="Lockable parcel box" data-what="Last-mile delivery" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Lockable parcel box</b><span>Last-mile delivery</span></button></li><li><button type="button" class="ind-job" data-job="Cold-chain cargo box" data-what="Insulated, temperature-logged" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Cold-chain cargo box</b><span>Insulated, temperature-logged</span></button></li><li><button type="button" class="ind-job" data-job="Pallet fork lift" data-what="Yard and dock moves" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Pallet fork lift</b><span>Yard and dock moves</span></button></li><li><button type="button" class="ind-job" data-job="Trailer tow hitch" data-what="Cart and trailer trains" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Trailer tow hitch</b><span>Cart and trailer trains</span></button></li><li><button type="button" class="ind-job" data-job="Roller deck" data-what="Cross-dock transfer" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Roller deck</b><span>Cross-dock transfer</span></button></li><li><button type="button" class="ind-job" data-job="Barcode / RFID mast" data-what="Live stock count" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Barcode / RFID mast</b><span>Live stock count</span></button></li><li><button type="button" class="ind-job" data-job="Container seal camera" data-what="Gate inspection" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Container seal camera</b><span>Gate inspection</span></button></li><li><button type="button" class="ind-job" data-job="Under-vehicle camera" data-what="Truck check-in" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Under-vehicle camera</b><span>Truck check-in</span></button></li><li><button type="button" class="ind-job" data-job="Drone landing pad" data-what="Air-ground handoff" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Drone landing pad</b><span>Air-ground handoff</span></button></li><li><button type="button" class="ind-job" data-job="Handoff touchscreen kiosk" data-what="Proof of delivery" data-ind-name="Logistics" aria-pressed="false">
+                  <b>Handoff touchscreen kiosk</b><span>Proof of delivery</span></button></li>
+            </ul>
+          </div>
+        <aside class="ind-detail" aria-live="polite">
+          <p class="mono ind-d-ind">Agriculture</p>
+          <h3 class="ind-d-job">Precision spray boom</h3>
+          <p class="ind-d-what">Crop protection</p>
+          <dl class="ind-d-list">
+            <div><dt>Attachment</dt><dd class="ind-d-att">Precision spray boom, on the common mount</dd></div>
+            <div><dt>Platform</dt><dd>Any size: ATOM, SAINT or LD09</dd></div>
+            <div><dt>Driving</dt><dd>Autonomous, or remote (teleoperation)</dd></div>
+            <div><dt>Navigation</dt><dd>Works with or without GPS</dd></div>
+          </dl>
+          <a class="btn btn-ghost ind-d-ask" href="mailto:harish@kal-m.com?subject=Industries%3A%20Precision%20spray%20boom">Ask about this job</a>
+        </aside>
+      </div>
     </div>
+  </div>
+</section>
+
+
+<section class="ind-sec alt" aria-labelledby="rangeTitle">
+  <div class="wrap">
+    <p class="eyebrow mono">Platform range</p>
+    <h2 class="h2" id="rangeTitle">Three sizes, one design</h2>
+    <img class="ind-sizes" src="assets/img/sizes.webp" alt="Small, medium and large KAL-M platforms next to a person, blueprint style" width="1280" height="800" loading="lazy">
+    <div class="ind-plats">
+      <article class="ind-plat">
+          <p class="mono ind-plat-size">Small platform</p>
+          <h3>UGV-ATOM</h3>
+          <dl>
+            <div><dt>Range</dt><dd>5 km</dd></div>
+            <div><dt>Payload</dt><dd>Up to 50 kg</dd></div>
+            <div><dt>Best for</dt><dd>Compound, campus and farm</dd></div>
+            <div><dt>Use</dt><dd>Indoor and short range</dd></div>
+            <div><dt>Build</dt><dd>Compact and agile</dd></div>
+          </dl>
+          <p class="mono ind-status">In development</p>
+        </article><article class="ind-plat">
+          <p class="mono ind-plat-size">Medium platform</p>
+          <h3>UGV-SAINT</h3>
+          <dl>
+            <div><dt>Range</dt><dd>10 km</dd></div>
+            <div><dt>Payload</dt><dd>Up to 150 kg</dd></div>
+            <div><dt>Best for</dt><dd>Industrial site and perimeter</dd></div>
+            <div><dt>Use</dt><dd>Industrial, security and field ops</dd></div>
+            <div><dt>Build</dt><dd>Versatile and modular</dd></div>
+          </dl>
+          <p class="mono ind-status">In development</p>
+        </article><article class="ind-plat">
+          <p class="mono ind-plat-size">Large platform</p>
+          <h3>UGV-LD09</h3>
+          <dl>
+            <div><dt>Range</dt><dd>15 km</dd></div>
+            <div><dt>Payload</dt><dd>Up to 500 kg</dd></div>
+            <div><dt>Best for</dt><dd>Long corridor and forward base</dd></div>
+            <div><dt>Use</dt><dd>Heavy duty, harsh terrain</dd></div>
+            <div><dt>Build</dt><dd>Rugged, high payload</dd></div>
+          </dl>
+          <p class="mono ind-status">In development</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="ind-sec" aria-labelledby="autoTitle">
+  <div class="wrap">
+    <p class="eyebrow mono">Autonomy</p>
+    <h2 class="h2" id="autoTitle">How it finds its way without GPS</h2>
+    <ol class="ind-flow">
+      <li class="ind-step"><span class="mono ind-step-n">01</span><h3>Sense</h3><ul><li>Camera</li><li>LiDAR</li><li>IMU</li><li>GNSS / RTK</li></ul></li><li class="ind-step"><span class="mono ind-step-n">02</span><h3>Locate</h3><ul><li>SLAM</li><li>Patented Q-LOCATION</li><li>Keeps working when GPS drops</li></ul></li><li class="ind-step"><span class="mono ind-step-n">03</span><h3>Plan</h3><ul><li>ROS path planning</li><li>On NVIDIA Jetson Orin Nano</li></ul></li><li class="ind-step"><span class="mono ind-step-n">04</span><h3>Proven in simulation</h3><ul><li>Tested in Isaac Sim</li><li>before it reaches the field</li></ul></li>
+    </ol>
+  </div>
+</section>
+
+
+<section class="ind-sec alt" aria-labelledby="proofTitle">
+  <div class="wrap">
+    <p class="eyebrow mono">Proof</p>
+    <h2 class="h2" id="proofTitle">Tested where it is hardest</h2>
+    <div class="ind-proof">
+      <div class="ind-num"><b>12,000 ft</b><span>Altitude reached in Indian Army trials, May 2025</span></div><div class="ind-num"><b>150 kg</b><span>Payload carried in the same trials</span></div><div class="ind-num"><b>30°</b><span>Slope climbed under load</span></div><div class="ind-num"><b>20 days</b><span>Forward deployment trial, Nov–Dec 2025</span></div>
+    </div>
+    <p class="ind-patent">Navigation built on KAL-M's patented technology: 1 patent granted (Aug 2025), 2 more filed.</p>
+  </div>
+</section>
+
+
+<section class="ind-sec" id="pilot" aria-labelledby="pilotTitle">
+  <div class="wrap ind-pilot">
+    <div>
+      <h2 class="h2" id="pilotTitle">Talk to us about a pilot</h2>
+      <p class="ind-lead">Tell us the job and the site. We will tell you which platform and attachment fit, and how a pilot would run.</p>
+    </div>
+    <div class="ind-actions"><a class="btn" href="mailto:harish@kal-m.com?subject=Industries%3A%20pilot%20enquiry">Email us</a><a class="btn btn-ghost" href="tel:+918008004375">Call +91 800 800 4375</a></div>
   </div>
 </section>
 

@@ -329,132 +329,29 @@ document.querySelectorAll('.kitparts').forEach((root) => {
   ready.forEach((t) => io.observe(t));
 })();
 
-// Industries page: the Robo guide (KAL-M UGV, scanning LiDAR) drives an irregular route over a drawn map as you scroll.
-// The map (contour hills, river, roads, building blocks, a farm patch) is drawn from a fixed seed, so it is the same every visit.
-// Stops light up as the guide reaches them; cards sit beside their stop on the side with more room.
+
+// Industries page: Find your job. Pick an industry tab, then a job; the side panel shows that job on the platform.
+// Without JS every industry list shows in full (CSS), so nothing is hidden from readers or search.
 (() => {
-  const map = document.getElementById('jrMap');
-  if (!map) return;
-  const NS = 'http://www.w3.org/2000/svg';
-  const svg = map.querySelector('.jr-route'), terrain = map.querySelector('.jr-terrain');
-  const ahead = map.querySelector('.jr-ahead'), done = map.querySelector('.jr-done');
-  const guide = map.querySelector('.jr-guide'), stops = [...map.querySelectorAll('.jr-stop')];
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) guide.querySelector('svg').pauseAnimations();
-  const rng = (seed) => () => {
-    seed |= 0; seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  const root = document.getElementById('indFind');
+  if (!root) return;
+  root.classList.add('is-live');
+  const tabs = [...root.querySelectorAll('.ind-tab')], panels = [...root.querySelectorAll('.ind-panel')], jobs = [...root.querySelectorAll('.ind-job')];
+  const d = (s) => root.querySelector(s);
+  const mail = d('.ind-d-ask').getAttribute('href').split('?')[0];
+  const show = (btn) => {
+    jobs.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+    d('.ind-d-ind').textContent = btn.dataset.indName;
+    d('.ind-d-job').textContent = btn.dataset.job;
+    d('.ind-d-what').textContent = btn.dataset.what;
+    d('.ind-d-att').textContent = `${btn.dataset.job}, on the common mount`;
+    d('.ind-d-ask').setAttribute('href', `${mail}?subject=${encodeURIComponent('Industries: ' + btn.dataset.job)}`);
   };
-  const f1 = (v) => v.toFixed(1);
-  const smooth = (pts, closed) => {                     // Catmull-Rom through the points, as cubic Bezier
-    const P = closed ? [pts[pts.length - 1], ...pts, pts[0], pts[1]] : [pts[0], ...pts, pts[pts.length - 1]];
-    let d = `M ${f1(P[1][0])} ${f1(P[1][1])}`;
-    for (let i = 1; i < P.length - 2; i++) {
-      const a = P[i - 1], b = P[i], c = P[i + 1], e = P[i + 2];
-      d += ` C ${f1(b[0] + (c[0] - a[0]) / 6)} ${f1(b[1] + (c[1] - a[1]) / 6)}, ${f1(c[0] - (e[0] - b[0]) / 6)} ${f1(c[1] - (e[1] - b[1]) / 6)}, ${f1(c[0])} ${f1(c[1])}`;
-    }
-    return closed ? d + ' Z' : d;
-  };
-  const el = (tag, attrs, parent = terrain) => {
-    const e = document.createElementNS(NS, tag);
-    for (const k in attrs) e.setAttribute(k, attrs[k]);
-    parent.appendChild(e); return e;
-  };
-  function drawTerrain(W, H) {
-    terrain.replaceChildren();
-    const r = rng(7);
-    for (let h = 0, n = Math.round(H / 320) + 4; h < n; h++) {          // contour hills
-      const cx = W * (0.04 + r() * 0.92), cy = H * r(), R = 90 + r() * 170, p1 = r() * 6, p2 = r() * 6, rings = 3 + Math.floor(r() * 4);
-      for (let k = 1; k <= rings; k++) {
-        const pts = [];
-        for (let i = 0; i < 26; i++) {
-          const t = (i / 26) * Math.PI * 2, rr = R * (k / rings) * (1 + 0.2 * Math.sin(3 * t + p1) + 0.12 * Math.sin(5 * t + p2));
-          pts.push([cx + Math.cos(t) * rr, cy + Math.sin(t) * rr * 0.8]);
-        }
-        el('path', { class: 'ct', d: smooth(pts, true) });
-      }
-    }
-    const wander = (x0, y0, x1, y1, n, amp) => {
-      const pts = [];
-      for (let i = 0; i <= n; i++) {
-        const t = i / n, mid = i && i < n;
-        pts.push([x0 + (x1 - x0) * t + (mid ? (r() - 0.5) * amp : 0), y0 + (y1 - y0) * t + (mid ? (r() - 0.5) * amp * 0.5 : 0)]);
-      }
-      return pts;
-    };
-    const river = smooth(wander(W * 1.05, H * 0.08, -W * 0.05, H * 0.62, 7, W * 0.35));
-    el('path', { class: 'river', d: river, 'stroke-width': Math.max(14, W * 0.022) });
-    el('path', { class: 'river2', d: river });
-    for (const y of [0.3, 0.83]) {                                        // roads
-      const road = smooth(wander(-W * 0.05, H * y, W * 1.05, H * (y + (r() - 0.5) * 0.1), 6, H * 0.08));
-      el('path', { class: 'road', d: road, 'stroke-width': Math.max(10, W * 0.014) });
-      el('path', { class: 'road2', d: road });
-    }
-    for (const [bx, by] of [[0.82, 0.22], [0.16, 0.7]]) {                  // building blocks
-      for (let i = 0; i < 9; i++) {
-        el('rect', { class: 'bld', x: W * bx + (r() - 0.5) * W * 0.16, y: H * by + (r() - 0.5) * H * 0.07, width: 18 + r() * 42, height: 14 + r() * 34, rx: 2 });
-      }
-    }
-    const fx = W * 0.78, fy = H * 0.52, fw = Math.min(260, W * 0.3), fh = 150;   // farm patch: crop rows
-    const farm = el('g', { transform: `rotate(-12 ${fx} ${fy})` });
-    for (let y = -fh / 2; y <= fh / 2; y += 11) el('line', { class: 'farm', x1: fx - fw / 2, x2: fx + fw / 2, y1: fy + y, y2: fy + y }, farm);
-  }
-  let L = 0, fr = [], cur = -1, ang = null, raf = 0, size = 1;
-  function layout() {
-    const W = map.clientWidth, phone = W < 700, row = phone ? 380 : 470, n = stops.length, H = row * (n + 0.5);
-    map.style.height = H + 'px'; map.classList.add('is-live');
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', W); svg.setAttribute('height', H);
-    drawTerrain(W, H);
-    size = phone ? 0.62 : 1;                             // smaller rover on phones (scaled in place)
-    const xs = phone ? [0.15, 0.2, 0.11, 0.19, 0.13] : [0.37, 0.6, 0.43, 0.64, 0.47];   // irregular, not a zig-zag pattern
-    const ys = [0.72, 1.72, 2.82, 3.68, 4.62];
-    const pts = stops.map((_, i) => [W * xs[i % xs.length], row * ys[i % ys.length]]);
-    const r = rng(11), via = [[W * (phone ? 0.16 : 0.52), -10]];
-    pts.forEach((p, i) => {                                               // a bend between stops, never the same twice
-      const q = i ? pts[i - 1] : via[0];
-      via.push([(q[0] + p[0]) / 2 + (r() - 0.5) * W * (phone ? 0.08 : 0.22), (q[1] + p[1]) / 2 + (r() - 0.5) * row * 0.2], p);
-    });
-    via.push([W * (phone ? 0.15 : 0.5), H + 10]);
-    const d = smooth(via);
-    ahead.setAttribute('d', d); done.setAttribute('d', d);
-    L = done.getTotalLength(); done.style.strokeDasharray = `${L} ${L}`;
-    fr = pts.map(([x, y]) => {
-      let best = 0, bd = Infinity;
-      for (let k = 0; k <= 800; k++) {
-        const q = done.getPointAtLength(L * k / 800), dd = (q.x - x) ** 2 + (q.y - y) ** 2;
-        if (dd < bd) { bd = dd; best = k / 800; }
-      }
-      return best;
-    });
-    stops.forEach((li, i) => {
-      const [x, y] = pts[i], card = li.querySelector('.jr-card');
-      li.style.top = y + 'px'; li.querySelector('.jr-dot').style.left = x + 'px';
-      const right = phone || x < W / 2;
-      card.style.left = right ? `${phone ? W * 0.33 : x + 44}px` : `${x - 44 - card.offsetWidth}px`;
-    });
-    cur = -1; ang = null; tick();
-  }
-  const target = () => { const b = map.getBoundingClientRect(); return Math.min(1, Math.max(0, (innerHeight * 0.55 - b.top) / b.height)); };
-  function place(p) {
-    const l = L * p, a = done.getPointAtLength(Math.max(0, l - 6)), b = done.getPointAtLength(Math.min(L, l + 6)), q = done.getPointAtLength(l);
-    const t = Math.atan2(b.y - a.y, b.x - a.x);
-    if (ang === null || reduce) ang = t;
-    else { const dt = Math.atan2(Math.sin(t - ang), Math.cos(t - ang)); ang += dt * 0.25; }   // turn smoothly, no wiggle
-    guide.style.transform = `translate(${q.x}px, ${q.y}px) rotate(${ang}rad) scale(${size})`;
-    done.style.strokeDashoffset = String(L - l);
-    stops.forEach((li, i) => li.classList.toggle('on', p >= fr[i] - 0.002));
-    return t;
-  }
-  function tick() {
-    raf = 0; const tg = target();
-    cur = cur < 0 || reduce ? tg : cur + (tg - cur) * 0.1;
-    if (Math.abs(tg - cur) < 0.0004) cur = tg;
-    const t = place(cur);
-    const turning = Math.abs(Math.atan2(Math.sin(t - ang), Math.cos(t - ang))) > 0.01;
-    if (cur !== tg || turning) raf = requestAnimationFrame(tick);
-  }
-  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
-  let rt = 0;
-  addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 150); });
-  layout();
+  tabs.forEach((t) => t.addEventListener('click', () => {
+    tabs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+    panels.forEach((p) => { p.hidden = p.dataset.ind !== t.dataset.ind; });
+    const first = root.querySelector(`.ind-panel[data-ind="${t.dataset.ind}"] .ind-job`);
+    if (first) show(first);
+  }));
+  jobs.forEach((b) => b.addEventListener('click', () => show(b)));
 })();
